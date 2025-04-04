@@ -1,0 +1,3202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <title>Nivelamento - Língua Portuguesa Nível 2 - Unidade 5</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Oculta rolagem horizontal */
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    
+        .titulo-programa {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 70px;
+            color: #003974;
+            font-weight: lighter;
+        }
+
+        .titulo-materia {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 133px;
+            color: #003974;
+            font-weight: lighter;
+        }
+
+        .subtitulo-professor {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 59px;
+            color: #0058B4;
+            font-weight: lighter;
+        }
+
+        .titulo-unidade {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 60px;
+        }
+
+        .titulo-saiba-mais {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 70px;
+        }
+        /* Estilização de Bebas Neue FIM */
+
+
+        /* Estilização de Roboto INICIO */
+        .peso-1 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 45px;
+        }
+
+        .texto {
+            font-family: 'Roboto', sans-serif;
+            font-size: 35px;
+        }
+
+        .sub-texto {
+            font-family: 'Roboto', sans-serif;
+            font-size: 25px;
+        }
+
+        .titulo-box {
+            font-family: 'Roboto', sans-serif;
+            font-size: 32px;
+        }
+
+        .fonte {
+            font-family: 'Roboto', sans-serif;
+            font-size: 25px;
+        }
+
+        .citacao {
+            font-family: 'Roboto', sans-serif;
+            font-size: 30px;
+            font-style: italic;
+        }
+
+        .referencias {
+            font-family: 'Roboto', sans-serif;
+            font-size: 35px;
+        }
+
+        /* Estilização de Roboto FIM */
+        /* Navbar styles INICIO */
+        .navbar {
+            background-color: #9F43BE;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            position: -webkit-sticky; /* Para navegadores antigos */
+            position: sticky; /* Para manter no topo durante o scroll */
+            top: 0; /* Faz com que a navbar fique no topo */
+            z-index: 10; /* Garante que o menu fique acima de outros elementos */
+            transition: background-color 0.3s ease; /* Transição suave para o efeito */
+        }
+
+        .navbar .logo img {
+            height: 50px;/* Ajuste conforme necessário */
+            width: auto;
+        }
+
+        .navbar .menu-toggle {
+            cursor: pointer;
+            font-size: 1.5em;
+            display: block;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: none;
+            flex-direction: column;
+            background-color: #9f43be;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 220px; /* Aumenta um pouco a largura */
+            max-height: 300px; /* Define um limite de altura */
+            overflow-y: auto; /* Adiciona scroll vertical se necessário */
+            border-radius: 5px;
+            z-index: 10;
+            scrollbar-width: thin; /* Estiliza a barra de rolagem (Firefox) */
+            scrollbar-color: #fff #9f43be; /* Personaliza a cor */
+        }
+
+        .navbar ul.show {
+            display: flex;
+        }
+
+        .navbar ul li {
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .navbar ul li a:hover {
+            color: #003974; /* Cor ao passar o mouse */
+        }
+        .navbar .menu-toggle i:last-child {
+            display: none; /* Esconde o ícone de fechar inicialmente */
+        }
+        /* Para Chrome, Edge e Safari */
+        .navbar ul::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .navbar ul::-webkit-scrollbar-thumb {
+            background-color: #fff;
+            border-radius: 3px;
+        }
+
+        .navbar ul::-webkit-scrollbar-track {
+            background-color: #9f43be;
+        }
+
+         /* Navbar styles FIM */
+
+        /* Titulo styles INICIO */
+        .titulo-intro {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .titulo-intro h1 {
+            margin: 0;
+            padding: 15px;
+        }
+        /* Titulo styles FIM */
+
+        /* Estilo da Capa do Livro INICIO*/
+        .capa-livro {
+            position: relative;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden; /* Para evitar que o pseudoelemento saia do container */
+            border-top: 3px solid #003974;
+            border-bottom: 3px solid #003974;
+        }
+
+        .capa-livro::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://res.cloudinary.com/di4ria1pf/image/upload/v1741784872/xw24i9yzlzfsicthkntq.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.2; /* Controle da opacidade */
+            z-index: -1; /* Coloca o background atrás do conteúdo */
+        }
+
+        
+
+        .capa-livro .conteudo-capa {
+            text-align: center;
+            color: white;
+            padding: 20px; /* Espaço interno para o texto */
+        }
+
+        .capa-livro .titulo-materia {
+            font-size: 80px;
+            font-family: 'Bebas Neue', cursive;
+            margin: 0;
+        }
+
+        .capa-livro .subtitulo-professor {
+            font-size: 40px;
+            font-family: 'Bebas Neue', cursive;
+            margin: 10px 0 0;
+        }
+        /* Estilo da Capa do Livro FIM*/
+
+        /* Barra Superior */
+        .barra-superior {
+            background-color: #015A42; /* Cor verde escuro */
+            width: 100%;
+            padding: 15px 15px;
+            text-align: center;
+            box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
+            overflow-x: hidden; /* Previne rolagem horizontal */
+        }
+
+        .barra-superior .titulo-barra {
+            font-family: 'Bebas Neue', cursive;
+            color: #FFF; /* Cor branca */
+            font-size: 50px;
+            font-weight: lighter;
+            margin: 0;
+        }
+
+        /* Conteúdo da Introdução */
+        .introducao {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            margin-top: 100px;
+            background-color: #E2F4EB; /* Fundo neutro */
+            overflow-x: hidden; /* Impede rolagem horizontal */
+        }
+        
+        .introducao .titulo-introducao {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 50px;
+            font-weight: lighter;
+            color: #015A42; /* Cor verde */
+            margin: 10px auto 10px auto;
+        }
+
+        .introducao .caixa-texto {
+            background-color: #E2F4EB; /* Verde mais claro */
+            padding: 20px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .introducao .caixa-texto p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        /* RESPONSIVIDADE SEÇÕES ACIMA*/
+        /* Capa do Livro - Responsividade */
+        @media (max-width: 768px) {
+            .capa-livro {
+                height: 350px; /* Reduz a altura da capa */
+                padding: 20px; /* Ajusta o espaçamento interno */
+            }
+
+            .capa-livro .titulo-materia {
+                font-size: 50px; /* Reduz o tamanho do título */
+            }
+
+            .capa-livro .subtitulo-professor {
+                font-size: 30px; /* Reduz o tamanho do subtítulo */
+            }
+
+            .capa-livro .conteudo-capa {
+                padding: 15px; /* Ajusta o padding para telas menores */
+            }
+        }   
+            /* Seção Introdução - Responsividade */
+        @media (max-width: 768px) {
+            .barra-superior {
+                padding: 10px; /* Reduz o padding da barra */
+            }
+
+            .barra-superior .titulo-barra {
+                font-size: 1.8rem; /* Reduz o tamanho do título na barra */
+            }
+
+            .introducao .titulo-introducao {
+                font-size: 2.8rem; /* Reduz o tamanho do título da introdução */
+                margin-top: 20px; /* Ajusta o espaçamento superior */
+            }
+
+            .introducao .caixa-texto {
+                padding: 20px; /* Reduz o padding da caixa de texto */
+                width: 90%; /* Ajusta a largura da caixa */
+            }
+
+            .introducao .caixa-texto p {
+                font-size: 1.2rem; /* Reduz o tamanho do texto */
+                line-height: 1.4;
+                margin-bottom: 10px; /* Ajusta a margem entre os parágrafos */
+            }
+        }
+        /* Responsividade para o título da seção de Programa */
+        @media (max-width: 768px) {
+            .titulo-programa {
+                font-size: 50px; /* Ajuste do tamanho do título */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .titulo-programa {
+                font-size: 35px; /* Ajuste para telas muito pequenas */
+            }
+        }
+        /* Título da seção */
+        .secao1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #9f43be11;
+            padding: 20px;  
+        }
+
+        .secao1 h1 {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: #015A42; /* Cor verde */
+            width: 90%;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+            
+        }
+
+        .secao1 p {
+            font-size: 19px;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin: 20px auto;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+        
+        /* Estilo responsivo para telas menores */
+        @media (max-width: 768px) {
+            .secao1 h1 {
+                font-size: 1.5rem;
+                text-align: left;
+            }
+
+            .secao1 p {
+                font-size: 0.9rem;
+                line-height: 1.4;
+            }
+
+        }
+        @media (max-width: 480px) {
+            .secao1 h1 {
+                font-size: 1.5rem;
+            }
+
+            .secao1 p {
+                font-size: 1.2rem;
+            } 
+        }
+         /* Título da seção */
+        .secao2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #FFF;
+            padding: 20px;  
+        }
+
+        .secao2 h1 {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: #015A42; /* Cor verde */
+            width: 90%;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+
+        .secao2 p {
+            font-size: 19px;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin: 20px auto;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+
+        /* Estilo responsivo para telas menores */
+        @media (max-width: 768px) {
+            .secao2 h1 {
+                font-size: 1.5rem;
+                text-align: left;
+            }
+
+            .secao2 p {
+                font-size: 0.9rem;
+                line-height: 1.4;
+            }
+
+        }
+        @media (max-width: 480px) {
+            .secao2 h1 {
+                font-size: 1.5rem;
+            }
+
+            .secao2 p {
+                font-size: 1.2rem;
+            } 
+        }
+        /* Container principal */
+        .container-box {
+            background-color: #fff; /* Fundo branco */
+            border: 2px solid #9F43BE; /* Borda verde */
+            border-radius: 10px; /* Cantos arredondados */
+            padding: 20px; /* Espaçamento interno */
+            width: 90%;
+            max-width: 700px; /* Limite de largura */
+            margin: 20px auto; /* Centralizar */
+        }
+        .container-box p {
+            margin: 0; /* Remove a margem herdada */
+            width: 100%; /* Faz o texto ocupar todo o espaço disponível */
+        }
+        /* Layout da imagem + texto */
+        .content {
+            display: flex;
+            align-items: stretch; /* Faz com que imagem e texto ocupem o mesmo espaço vertical */
+            justify-content: space-between;
+            gap: 20px; /* Espaço entre os elementos */
+        }
+            /* Garantir que a fonte fique abaixo da imagem */
+        .imagem-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centraliza a imagem e a fonte */
+        }
+
+        /* Ajustar a posição da fonte abaixo da imagem */
+        .fonte-imagem {
+            font-size: 12px !important;
+            color: #555;
+            text-align: center;
+            margin-top: 5px; /* Pequeno espaçamento entre a imagem e a fonte */
+            display: block;
+        }
+    
+        /* Imagem */
+        .content img {
+            width: 350px; /* Ajuste do tamanho da imagem */
+            height: auto;
+            border-radius: 5px; /* Pequeno arredondamento */
+            object-fit: cover; /* Garante que a imagem preencha seu espaço sem distorcer */
+        }
+
+        /* Texto */
+        .textimg {
+            font-family: 'Roboto', sans-serif !important;
+            font-size: 16px !important;
+            line-height: 1.5 !important;
+            flex: 1 !important; /* O texto ocupa o espaço restante */
+            text-align: justify;
+            height: 100%; /* Faz com que o bloco de texto tenha a mesma altura da imagem */
+        }
+
+        /* Descrição abaixo da imagem */
+        .description {
+            font-family: 'Roboto', sans-serif !important;
+            font-size: 14px !important;
+            margin-top: 10px !important;
+            text-align: justify !important; /* Melhor alinhamento */
+        }
+
+        /* 🔹 Responsividade 🔹 */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column !important; /* Empilha imagem e texto */
+                align-items: center;
+                text-align: center !important;
+            }
+
+            .container-box {
+                width: 85%; /* Reduz a largura em telas médias */
+                max-width: 400px; /* Define um limite para não ficar muito grande */
+            }
+
+            .content img {
+                width: 90% !important; /* Imagem mais responsiva */
+                max-width: 300px !important; /* Limite de tamanho */
+                margin-bottom: 10px !important; /* Espaço entre imagem e texto */
+            }
+
+            .textimg {
+                font-size: 15px !important; /* Texto reduzido */
+                text-align: justify !important; /* Melhor leitura */
+                display: block; /* Garante que o texto fique bem distribuído */
+            }
+            
+        }
+
+        @media (max-width: 480px) {
+            .container-box {
+                width: 80%; /* Ajuste para telas pequenas */
+                max-width: 400px; /* Reduz ainda mais em celulares menores */
+                padding: 15px; /* Ajusta o espaçamento interno */
+            }
+        }
+        .tabs-container {
+            width: 80%;
+            max-width: 600px;
+            padding: 10px;
+        }
+
+        .tabs-header {
+            display: grid;
+            justify-content: space-between;
+            gap: 10px; /* Espaçamento entre as abas */
+            grid-template-columns: repeat(2, 1fr); /* 2 por linha no mobile */
+        }
+
+        .tab-button {
+            flex: 1 1 calc(50% - 10px); /* 2 por linha no mobile */
+            min-width: 120px;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            border: none;
+            background: #015A42; /* Cor individual para cada aba */
+            border-radius: 8px; /* Borda arredondada */
+            transition: background 0.3s, transform 0.2s;
+        }
+        .tab-button:hover {
+            background: #015A42; /* Tom mais escuro ao passar o mouse */
+            transform: scale(1.05);
+        }
+         .tab-button.active {
+            background: #005700;
+        }
+
+        .tabs-content {
+            background: white;
+            border: 2px solid #015A42;
+            padding: 10px;
+            border-radius: 10px;
+            display: none; /* Inicialmente oculto */
+            margin-top: 10px;
+        }
+
+        .tab-content {
+            display: none;
+            text-align: center;
+        }
+
+        .tab-content img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+                /* COR PARA A SEGUNDA SEÇÃO */
+        .tabs-container-alt .tab-button {
+            background: #9F43BE;
+        }
+
+        .tabs-container-alt .tab-button:hover {
+            background: #752B8A;
+        }
+
+        .tabs-container-alt .tab-button.active {
+            background: #752B8A;
+        }
+
+        .tabs-container-alt .tabs-content {
+            border: 2px solid #9F43BE;
+        }
+           /* Ajuste para tablets */
+@media screen and (min-width: 600px) {
+    .tabs-header {
+        grid-template-columns: repeat(3, 1fr); /* 3 por linha */
+    }
+}
+
+/* Ajuste para desktop */
+@media screen and (min-width: 900px) {
+    .tabs-header {
+        grid-template-columns: repeat(4, 1fr); /* 4 por linha */
+    }
+}
+        .text-italic{
+            font-style: italic;
+        }
+         .text-italicr{
+            font-style: italic;
+            text-align: right;
+        }
+        .underlinetext{
+            text-decoration: underline;
+        }
+        /* Ajustar a posição da fonte abaixo da imagem */
+        .fonte-imagemr {
+            font-size: 12px !important;
+            color: #555;
+            text-align: right !important;
+        }
+        .small-frameg {
+            border: 2px solid #015A42;
+            border-radius: 10px;
+            width: 80%; /* Usa 90% da largura do contêiner */
+            max-width: 700px; /* Define limite máximo */
+            background-color: #FFF;
+            height: auto;
+            margin: 20px auto; /* Centraliza e ajusta margem superior */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Leve sombra para destaque */
+        }
+        .divisor {
+            border: none;
+            border-top: 2px solid #015A42; /* Cor igual à borda do contêiner */
+            width: 100%;
+            margin: 10px auto; /* Centraliza o divisor */
+            opacity: 0.7; /* Torna a linha um pouco mais suave */
+        }
+        .small-frameg p {
+            font-size: 15px;
+            font-family: 'Roboto', sans-serif;
+            color: #000;
+            line-height: 1.8;
+            text-align: justify;
+            margin: 20px auto;
+        }
+
+        .small-frameg h4{
+            text-align: center;
+            margin: 20px auto;
+            line-height: 1.8;
+            font-family: 'Roboto', sans-serif;
+        }
+                /* Responsividade */
+        @media (max-width: 768px) {
+            .small-frameg {
+                width: 90%; /* Mais largura para ocupar melhor a tela */
+                padding: 15px;
+            }
+
+            .small-frameg p {
+                font-size: 14px; /* Mantém boa leitura */
+                line-height: 1.7;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .small-frameg {
+                width: 95%; /* Usa quase toda a tela para não ficar apertado */
+                padding: 10px;
+            }
+
+            .small-frameg p {
+                font-size: 13px; /* Mantém o texto confortável */
+                line-height: 1.6;
+            }
+        }
+        .text-left {
+            text-align: left !important;
+            margin-left: 40px !important; /* Ajusta alinhamento à esquerda */
+            margin-right: auto !important;
+        }
+
+        .text-right {
+            text-align: right !important;
+            margin-right: 40px !important; /* Ajusta alinhamento à direita */
+            margin-left: auto !important;
+        }
+        /* Contêiner dos flip cards */
+        .flip-card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajusta o número de colunas automaticamente */
+            gap: 40px; /* Espaçamento entre os cards */
+            justify-content: center;
+            margin: 20px auto;
+            padding-bottom: 20px; /* Garante que o espaçamento inferior seja visível */
+            max-width: 600px;
+        }
+
+        /* Estilo geral do flip card */
+        .flip-card {
+            width: 100%;
+            height: 180px;
+            perspective: 1000px; /* Adiciona a perspectiva 3D */
+            cursor: pointer;
+        }
+        
+        /* Parte interna do flip card */
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.8s ease-in-out;
+        }
+
+        /* Front e Back dos cards */
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #015A42;
+            border-radius: 10px;
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Face da frente */
+        .flip-card-front {
+            background: linear-gradient(135deg, #015A42, #02785D);
+            color: white;
+    
+        }
+
+        /* Face de trás */
+        .flip-card-back {
+            background-color: white;
+            color: #444;
+            transform: rotateY(180deg);
+            font-size: 12px;
+            line-height: 1.6;
+        }
+        
+
+        /* Efeito de rotação ao passar o mouse */
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+       @media (max-width: 768px) {
+        .flip-card-containerg {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .flip-cardg {
+            width: 45%; /* Cada card ocupa 45% da largura, cabendo dois por linha */
+            max-width: 170px; /* Mantém um limite de tamanho */
+            margin: 5px;
+        }
+        .flip-card-frontg,
+        .flip-card-backg {
+            font-size: 12px; /* Reduz o tamanho do texto */
+            padding: 8px; /* Ajusta o espaçamento interno */
+        }
+    }
+
+    @media (max-width: 768px) {
+        .flip-card-container {
+            grid-template-columns: repeat(2, minmax(140px, 1fr)); /* Garante 2 cards por linha */
+            gap: 25px; /* Reduz o espaçamento */
+            padding: 10px;
+        }
+
+        .flip-card {
+            height: 200px; /* Ajuste na altura */
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            font-size: 12px; /* Reduz tamanho da fonte */
+            padding: 8px;
+        }
+    }
+    /* Estilo para os tópicos de texto */
+        .topico-texto {
+            width: 90%;
+            max-width: 800px;
+            padding: 10px;
+        }
+
+        .topico-texto p {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .topico-texto ul {
+            list-style: none; /* Remove marcadores padrão */   
+        }
+
+        .topico-texto ul li {
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            display: flex;
+            align-items: flex-start; /* Alinha o texto com o ícone */
+            white-space: pre-wrap; /* Preserva espaços e quebras de linha */
+            flex-direction: column;
+        }
+                /* Subitens */
+        .subitens {
+            padding-left: 25px; /* Indentação para subitens */
+        }
+
+        .subitens li {
+            display: list-item;
+            list-style-type: disc; /* Aparece como bolinha • */
+            color: #444;
+            font-size: 15px;
+        }
+                .topico-destaque {
+            font-size: 18px; /* Aumente o tamanho conforme a necessidade */
+            font-weight: 400;
+            padding: 5px 0;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .topico-texto {
+                padding: 15px;
+            }
+
+            .topico-texto p {
+                font-size: 16px;
+            }
+
+            .topico-texto ul li {
+                font-size: 14px;
+            }
+        }
+         /* Acordeon styles */
+        .acordeon-container {
+            margin-top: 20px;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+
+        .acordeon {
+            border-radius: 10px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .acordeon-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #9F43BE;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            font-size: 17px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .acordeon-headerv {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #015A42;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            font-size: 17px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .acordeon-content {
+            display: none;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            padding-top: 0; /* Remove padding para que o header toque no conteúdo */
+            border: 2px solid #9F43BE;
+            border-radius: 0 0 10px 10px; /* Apenas canto inferior arredondado */
+        }
+        .acordeon-contentv {
+            display: none;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            padding-top: 0; /* Remove padding para que o header toque no conteúdo */
+            border: 2px solid #015A42;
+            border-radius: 0 0 10px 10px; /* Apenas canto inferior arredondado */
+        }
+        .acordeon-content p {
+            margin: 20px auto;
+            font-size: 16px;
+        }
+        .acordeon-contentv p {
+            margin: 20px auto;
+            font-size: 16px;
+        }
+            /* Estilo do ícone da seta */
+        .acordeon-icon {
+            font-size: 40px;
+            transition: transform 0.3s ease; /* Para rotação suave */
+        }
+        .quadroacordeon{
+            border: 1px solid #9F43BE;
+            margin: 20px auto;
+            padding: 10px;
+            max-width: 90%;
+        }
+        .quadroacordeon p{
+            font-style: italic;
+        }
+            /* Rotação da seta para cima */
+        .acordeon-header.active .acordeon-icon {
+            transform: rotate(180deg); /* Gira a seta para cima */
+        }
+        /* Rotação da seta para cima */
+        .acordeon-headerv.active .acordeon-icon {
+            transform: rotate(180deg); /* Gira a seta para cima */
+        }
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            .acordeon-header {
+                font-size: 20px; /* Reduzir tamanho do texto */
+                padding: 12px; /* Ajustar espaçamento */
+            }
+
+            .acordeon-icon {
+                font-size: 30px; /* Reduzir tamanho do ícone */
+            }
+
+            .acordeon-content {
+                font-size: 14px; /* Reduzir tamanho do texto do conteúdo */
+                padding: 10px; /* Reduzir espaçamento interno */
+            }
+
+            .acordeon-content p {
+                margin: 15px; /* Ajustar margem para menor espaçamento */
+            }
+        }
+        /* Responsividade para telas menores ainda (480px) */
+        @media (max-width: 480px) {
+            .acordeon-header {
+                font-size: 19px; /* Reduz ainda mais o tamanho do texto */
+                padding: 10px; /* Ajustar espaçamento */
+            }
+
+            .acordeon-icon {
+                font-size: 25px; /* Reduzir tamanho do ícone */
+            }
+
+            .acordeon-content {
+                font-size: 13px; /* Reduzir tamanho do texto do conteúdo */
+                padding: 8px; /* Reduzir espaçamento interno */
+            }
+
+            .acordeon-content p {
+                margin: 10px; /* Ajustar margem para menor espaçamento */
+                font-size: 19px;
+            }
+        }
+            /* Acordeon styles FIM */
+        /* Container dos novos accordions */
+        .accordion-container-diferente {
+            margin-top: 20px;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+
+        /* Estilo do accordion */
+        .accordion-diferente {
+            border-radius: 10px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        /* Cabeçalho do accordion */
+        .accordion-header-diferente {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            cursor: pointer;
+            background-color: #015A42; /* Cor de fundo exclusiva */
+            color: #fff; /* Cor do texto */
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Ícone no cabeçalho */
+        .accordion-icon-diferente {
+            font-size: 40px;
+            transition: transform 0.3s ease; /* Transição para rotação */
+        }
+
+        /* Conteúdo do accordion */
+        .accordion-content-diferente {
+            display: none;
+            padding-top: 0;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #333; /* Cor do texto */
+            background-color: #FFF; /* Fundo mais claro */
+            border: 2px solid #015A42; /* Cor da borda combinando */
+            border-radius: 0 0 10px 10px; /* Apenas cantos inferiores arredondados */
+        }
+
+        .accordion-content-diferente p {
+            margin: 20px;
+            max-width: 800px;
+            font-size: 16px;
+        }
+        @media (max-width: 480px) {
+        .accordion-content-diferente p {
+            font-size: 16px;
+            margin: 10px;
+            }
+        }
+
+        /* Rotação do ícone */
+        .accordion-header-diferente.active .accordion-icon-diferente {
+            transform: rotate(180deg);
+        }
+         /* Retângulo de fundo */
+        .background-section {
+            background-color: #015A42; /* Cor de fundo verde */
+            border-radius: 20px; /* Bordas arredondadas */
+            min-height: 350px; /* Altura mínima */
+            width: 90%; /* Largura ajustada à estrutura */
+            max-width: 800px; /* Limite máximo */
+            height: auto; /* Altura do retângulo */
+            margin: 50px auto; /* Espaçamento da seção acima e centralização */
+            position: relative; /* Define o contexto de empilhamento */
+        }
+                /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .background-section {
+                width: 95%; /* Ajusta a largura */
+                margin: 50px auto; /* Ajuste de margem */
+            }
+        }
+        
+        /* Retângulo transparente (sobreposição) */
+        .transparent-section {
+            background-color: rgba(255, 255, 255, 0.822); /* Tom verde com transparência */
+            border: 2px solid #015A42; /* Borda sólida verde */
+            border-radius: 20px; /* Bordas arredondadas */
+            width: calc(100% - 40px); /* Reduz tamanho para acomodar margens */
+            height: 100%;
+            position: absolute; /* Define posicionamento relativo */
+            top: 20px;
+            left: 20px; 
+            z-index: 1; /* Garante que o retângulo fique sobre o fundo */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+            display: flex; /* Usamos flexbox para alinhar o conteúdo */
+            flex-direction: column; /* Alinha os elementos verticalmente */
+            justify-content: space-evenly; /* Distribui espaço uniformemente */
+            align-items: center; /* Alinha o conteúdo à esquerda */
+            text-align: center; /* Centraliza o texto */
+        }
+        
+        
+                /* Responsividade - Ajuste da largura da transparent-section para telas menores */
+        @media (max-width: 768px) {
+            .transparent-section {
+                width: 90%; /* Diminui a largura da sobreposição */
+                left: 5%; /* Ajusta o posicionamento para centralizar */
+                right: 5%; /* Garante que o elemento ocupe menos espaço na tela */
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        }
+        /* Círculo verde */
+        .circle-green {
+            position: absolute;
+            top: -30px; /* Distância do topo */
+            left: -30px; /* Distância da esquerda */
+            background-color: #015A42; /* Cor verde */
+            border-radius: 50%; /* Para garantir que seja redondo */
+            width: 120px; /* Tamanho do círculo */
+            height: 120px; /* Tamanho do círculo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2; /* Garantir que fique sobre o fundo */
+        }
+
+        /* Círculo branco sobre o verde */
+        .circle-white {
+            position: absolute;
+            top: -4px; /* Eleva o círculo branco para cima */
+            left: -5px; /* Centraliza o círculo branco sobre o verde */
+            background-color: white; /* Cor branca */
+            border-radius: 50%; /* Para garantir que seja redondo */
+            width: 120px; /* Tamanho do círculo branco */
+            height: 120px; /* Tamanho do círculo branco */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 3; /* Coloca o círculo branco sobre o verde */
+        }
+
+        /* Estilizando o ícone dentro do círculo branco */
+        .circle-white i {
+            font-size: 80px; /* Tamanho do ícone */
+            color: #015A42; /* Cor verde para o ícone */
+        }
+        /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .circle-green, .circle-white {
+                width: 60px; /* Diminui o tamanho */
+                height: 60px; /* Diminui o tamanho */
+                top: -5px; /* Ajusta o posicionamento */
+                left: -5px; /* Ajusta o posicionamento */
+            }
+
+            .circle-white i {
+                font-size: 40px; /* Reduz o ícone */
+            }
+        }
+        .learn-more-title {
+            color: #015A42; /* Cor verde */
+            font-size: 50px; /* Tamanho do título */
+            font-weight: lighter;
+            text-align: left;
+            font-family: 'Bebas Neue', sans-serif; /* Fonte Bebas Neue */
+            margin: -25px 0;
+            width: 80%; /* Ocupa toda a largura disponível */
+        }
+        .learn-more-paragraph {
+            font-family: 'Roboto', sans-serif; /* Fonte Roboto */
+            text-align: left;
+            font-size: 17px;
+            line-height: 1.4; /* Espaçamento entre linhas */
+            color: #000; /* Cor verde */
+            margin: -15px 0; /* Reduz margens */
+            width: 90%; /* Ocupa toda a largura disponível */
+            word-wrap: break-word;
+        }
+        .centered-paragraph {
+            text-align: center; /* Centraliza o texto horizontalmente */
+            margin: -5px 0; /* Ajusta a margem para uniformidade */
+            font-size: 17px; /* Mantém o tamanho consistente */
+            line-height: 1.4; /* Controla o espaçamento entre linhas */
+        }
+                /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .learn-more-title {
+                font-size: 30px; /* Ajusta o tamanho do título */
+                text-align: center;
+                margin: 10px 0;
+            }
+
+            .learn-more-paragraph {
+                font-size: 15px; /* Ajusta o tamanho do texto */
+                line-height: 1.4;
+                text-align: justify; /* Centraliza o texto */
+                margin: 5px 0; /* Reduz margens */
+            }
+        }
+            .outer-background {
+                padding: 10px;
+                background-color: #9f43be11; /* Cor de fundo para o contêiner externo */
+        }
+        .play-icon {
+            display: flex; /* Flexbox para centralizar o conteúdo */
+            justify-content: center;
+            align-items: center;
+            background-color: #015A42; /* Fundo verde */
+            color: #FFF; /* Ícone branco */
+            width: 90px; /* Largura do botão */
+            height: 55px; /* Altura do botão */
+            border-radius: 13px;
+            font-size: 40px; /* Tamanho do ícone */
+            cursor: pointer; /* Cursor de clique */
+            transition: transform 0.3s ease; /* Efeito de transição */
+        }
+
+        .play-icon:hover {
+            transform: scale(1.1); /* Aumenta levemente no hover */
+        }
+                /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .play-icon {
+                width: 60px; /* Diminui a largura */
+                height: 40px; /* Diminui a altura */
+                font-size: 25px; /* Diminui o tamanho do ícone */
+            }
+        }
+        /* Modal - Oculto por padrão */
+        .video-modal {
+            display: none; /* Inicialmente o modal está oculto */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro transparente */
+            z-index: 1000; /* Garantir que o modal fique acima de outros conteúdos */
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Conteúdo do modal (onde ficará o vídeo) */
+        .video-content {
+            position: relative;
+            background-color: #015A42;
+            border-radius: 10px;
+            padding: 20px;
+        }
+         
+        /* Responsividade - Ajustes para dispositivos móveis */
+        @media (max-width: 768px) {
+            .video-content {
+                max-width: 100%; /* Maximize a largura do modal no mobile */
+                padding: 10px;
+            }
+
+            .video-content iframe {
+                width: 100%; /* O iframe ocupará toda a largura disponível */
+                height: 56.25vw; /* Isso mantém a proporção de 16:9 */
+                max-height: 80vh; /* Evita que o vídeo ultrapasse a tela */
+                border-radius: 10px;
+            }
+        }
+
+        /* Botão de fechar */
+        .close-btn {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            font-size: 40px;
+            color: #FFF;
+            cursor: pointer;
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+        .close-btn:hover {
+            transform: scale(1.2); /* Aumenta levemente no hover */
+            color: #FF0000; /* Muda a cor para vermelho no hover */
+        }
+        .galeria {
+            border: 2px solid #015A42;
+            display: flex;
+            border-radius: 10px;
+            align-items: center;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: fit-content;
+            flex-wrap: wrap;
+        }
+
+        .galeria img {
+            width: 220px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .fonte-vertical {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            font-size: 12px;
+            color: #333;
+            font-style: italic;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 600px) {
+            .galeria {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .fonte-vertical {
+                writing-mode: horizontal-tb;
+                transform: none;
+                margin-top: 10px;
+            }
+        }
+        /* Container do slider */
+        .slider-container {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            overflow: hidden;
+            border: 3px solid #015A42;; /* Borda violeta */
+            border-radius: 10px;
+            background-color: #fff;
+            margin: 20px auto;
+        }
+
+        /* Slider */
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* Slides */
+        .slide {
+            min-width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 30px;
+            box-sizing: border-box;
+            overflow-wrap: break-word;
+            text-align: center;
+        }
+                /* Para o texto do slide não quebrar estranho */
+        .slide > strong, 
+        .slide > span {
+            display: inline; /* garante inline, inclusive o strong */
+            white-space: normal;
+        }
+        .slide strong {
+            font-weight: bold;
+            white-space: normal; /* Permite que o número não quebre */
+        }
+        .slide-texto {
+            display: inline-block; /* agora vira um bloco centrado */
+            max-width: 90%;
+            line-height: 1.5;
+            font-size: 18px;
+            text-align: left; /* texto alinha à esquerda, mas o bloco fica centralizado */
+        }
+                /* Responsivo */
+        @media (max-width: 768px) {
+            .slide {
+                padding: 25px 20px;
+            }
+            .slide-texto {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .slide {
+                padding: 20px 15px;
+            }
+            .slide-texto {
+                font-size: 15px;
+            }
+        }
+        /* Ajuste para responsividade */
+        @media (max-width: 768px) {
+            .slider-container {
+                width: 95%;
+            }
+
+            .slide {
+                font-size: 16px;
+                padding: 25px 30px; /* Aumenta o espaço interno */
+                min-height: 150px; /* Garante que todos os slides tenham espaço suficiente */
+                overflow: hidden;
+            }
+
+            .arrow {
+                font-size: 30px;
+            }
+
+            .left-arrow {
+                left: -5px;
+            }
+
+            .right-arrow {
+                right: -5px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .slider-container {
+                width: 100%;
+            }
+
+            .slide {
+                font-size: 14px;
+                padding: 20px 35px; /* Mais espaço para texto */
+                min-height: 160px; /* Mais altura mínima */
+            }
+
+            .arrow {
+                font-size: 25px;
+            }
+
+            .left-arrow {
+                left: -8px;
+            }
+
+            .right-arrow {
+                right: -8px;
+            }
+        }
+                /* Setas */
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #015A42;
+            font-size: 36px;
+            cursor: pointer;
+            z-index: 10;
+            transition: 
+                color 0.3s ease,
+                transform 0.2s ease;
+            padding: 5px;
+        }
+
+        /* Efeito suave no hover com deslocamento personalizado */
+        .left-arrow:hover {
+            color: #028b65;
+            transform: translateY(calc(-50% + 2px)) scale(1.1); /* Move levemente para baixo */
+        }
+
+        .right-arrow:hover {
+            color: #028b65;
+            transform: translateY(calc(-50% - 2px)) scale(1.1); /* Move levemente para cima */
+        }
+
+        /* Posição das setas */
+        .left-arrow {
+            left: 10px;
+        }
+
+        .right-arrow {
+            right: 10px;
+        }
+/* Título dentro do quadro */
+        .titulo-quadrov {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            color: #333; /* Verde */
+            margin-top: 50px;
+            font-weight: normal; /* Evita que o título fique em negrito */
+        }
+
+        /* Imagem dentro do quadro */
+        .imagem-quadrov {
+            width: 100%; /* Imagem ocupa toda a largura disponível */
+            max-width: 700px; /* Limite máximo da largura */
+            height: auto; /* Mantém a proporção */
+            margin-bottom: 15px;
+        }
+
+                /* Ajusta a posição da fonte da imagem */
+        .fonte-quadrov {
+            font-size: 13px !important;
+            font-style: italic;
+            color: #555;
+            margin-top: 0 !important;  /* Remove qualquer margem superior extra */
+            margin-bottom: 0 !important;  /* Remove margem inferior */
+            padding: 0 !important;
+            display: inline-block !important; /* Evita que o elemento expanda ocupando toda a largura */
+            width: 100% !important; /* Mantém o tamanho do conteúdo */ 
+            max-width: 700px !important;
+        }
+
+        /* Descrição da imagem */
+        .descricao-quadrov {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            color: #333; /* Preto claro */
+            text-align: justify;
+            line-height: 1.6;
+        }
+        /* Modal - Fundo escuro ao abrir a imagem */
+        .modal {
+            display: none; /* Escondido por padrão */
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Imagem no modal */
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            display: block;
+            margin: auto;
+            border-radius: 8px;
+        }
+
+        /* Botão de fechar */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        /* Estilo responsivo para o quadro */
+        @media (max-width: 768px) {
+            .quadrov {
+                padding: 15px;
+            }
+
+            .titulo-quadrov {
+                font-size: 20px;
+            }
+
+            .fonte-quadrov,
+            .descricao-quadrov {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .quadrov {
+                padding: 10px;
+            }
+
+            .titulo-quadrov {
+                font-size: 18px;
+            }
+
+            .fonte-quadrov,
+            .descricao-quadrov {
+                font-size: 12px;
+            }
+        }
+        .text-greenv{
+            color: #015A42;
+            font-weight: bold;
+        }
+        /* Conteúdo da Conclusão */
+        .conclusao {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #E2F4EB; /* Fundo neutro */
+        }
+
+        .conclusao .titulo-conclusao {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 50px;
+            font-weight: lighter;
+            color: #015A42; /* Cor verde */
+            margin: 10px auto 10px auto;
+        }
+        .conclusao .caixa-texto {
+            background-color: #E2F4EB; /* Verde mais claro */
+            width: 100%;
+            max-width: 800px;
+        }
+        .conclusao .caixa-texto p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #333;
+            margin-bottom: 15px;
+            padding: 10px 0;
+        }
+
+        /* Estilo responsivo para telas menores */
+        @media (max-width: 768px) {
+            .conclusao .titulo-conclusao {
+                font-size: 2.8rem;
+                text-align: left;
+            }
+
+            .conclusao .caixa-texto p {
+                font-size: 1.2rem;
+                line-height: 1.4;
+                margin-bottom: 10px;
+            }
+
+        }
+        @media (max-width: 480px) {
+            .conclusao .titulo-conclusao {
+                font-size: 2.8rem;
+            }
+
+            .conclusao .caixa-texto p {
+                font-size: 1.2rem;
+                line-height: 1.4;
+                margin-bottom: 10px;
+            } 
+        }
+        /* Conteúdo da Introdução */
+        .referencias {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            background-color: #FFF; /* Fundo neutro */
+            border-top: 5px solid #015A42;
+        }
+
+        .referencias .titulo-referencias {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 50px;
+            font-weight: lighter;
+            color: #015A42; /* Cor verde */
+            margin: 10px auto 10px auto;
+        }
+
+        .referencias .caixa-texto {
+            background-color: #FFF; /* Verde mais claro */
+            padding: 20px;
+            width: 100%;
+            max-width: 800px;
+            box-sizing: border-box; /* Inclui padding nas dimensões */
+            overflow-wrap: break-word; /* Quebra de palavras longas */
+        }
+
+        .referencias .caixa-texto p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #000;
+            margin-bottom: 20px;
+        }
+        .referencias .caixa-texto {
+            word-wrap: break-word;
+            overflow-wrap: anywhere;
+        }
+        .referencias .caixa-texto, .conclusao .caixa-texto {
+            word-wrap: break-word;
+            overflow-wrap: anywhere;
+        }
+                /* Ajustes responsivos */
+        @media (max-width: 768px) {
+            .referencias .titulo-referencias {
+                font-size: 50px; /* Ajuste do tamanho da fonte */
+            }
+
+            .referencias .caixa-texto {
+                padding: 15px; /* Menos padding */
+                max-width: 90%; /* Ajusta o tamanho da caixa no tablet */
+            }
+
+            .referencias .caixa-texto p {
+                font-size: 16px; /* Reduz o tamanho da fonte para telas menores */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .referencias .titulo-referencias {
+                font-size: 2.8rem; /* Menor tamanho da fonte no mobile */
+            }
+
+            .referencias .caixa-texto {
+                max-width: 95%; /* Ajusta ainda mais o tamanho da caixa */
+            }
+
+            .referencias .caixa-texto p {
+                font-size: 14px; /* Reduz ainda mais o tamanho da fonte */
+            }
+        }
+
+        
+        /* Estilização do rodapé */
+        .footer {
+            border-top: 5px solid #015A42; /* Borda superior */
+            background-color: #FFFFFF; /* Fundo branco */
+            text-align: center; /* Centralizar texto */
+            padding: 15px 0; /* Espaçamento interno */
+            box-sizing: border-box; /* Inclui padding nas dimensões */
+        }
+
+        .footer p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: #015A42; /* Cor do texto */
+            margin: 0; /* Remove espaçamento externo */
+        }
+        /* Texto descritivo */
+        .footer .fonte-menor {
+            font-family: 'Roboto', sans-serif;
+            font-size: 13px;
+            color: #555; /* Cor neutra */
+            line-height: 1.5; /* Espaçamento entre linhas */
+            display: block; /* Garante quebra para nova linha */
+            margin-top: 10px; /* Espaço entre o texto e o divisor */
+        }
+                /* Divisor */
+        .footer-divider {
+            border: none; /* Remove borda padrão */
+            height: 1px; /* Altura da linha */
+            background-color: #015A42; /* Cor da linha */
+            margin: 10px auto; /* Espaçamento vertical */
+            width: 80%; /* Define a largura do divisor */
+            opacity: 0.5; /* Reduz opacidade para suavizar */
+        }
+                /* Ajustes do rodapé para mobile */
+        @media (max-width: 480px) {
+            .footer p {
+                font-size: 15px; /* Ajusta o tamanho da fonte */
+            }
+            .footer .fonte-menor {
+                font-size: 12px; /* Reduz tamanho da fonte */
+                line-height: 1.4; /* Ajusta o espaçamento */
+            }
+            .footer-divider {
+                width: 100%; /* Ajusta largura do divisor no mobile */
+            }
+        }
+        .download-section {
+                padding: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+            }
+            .download-btn {
+                background-color: #9F43BE;
+                color: white;
+                text-decoration: none;
+                font-size: 16px;
+                padding: 10px 15px;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                transition: all 0.3s ease;
+                font-weight: bold;
+                margin-top: 80px;
+            }
+
+            .download-btn i {
+                font-size: 18px;
+            }
+
+            .download-btn:hover {
+                background-color: #7D3598;
+            }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="https://drive.google.com/thumbnail?id=1iZTd5_tOqqVTFtrgbqdKazN1J1Yk-PuE" alt="Logo">
+        </div>
+        <div class="menu-toggle">
+            <i class="bx bx-menu"></i>
+            <i class="bx bx-x" style="display: none;"></i> <!-- Ícone de fechar menu -->
+        </div>
+        <ul>
+            <li><a href="#introducao">Introdução</a></li>
+            <li><a href="#secao1">Tópico 1</a></li>
+            <li><a href="#secao22">Tópico 2</a></li>
+            <li><a href="#secao3">Tópico 3</a></li>
+            <li><a href="#secao4">Tópico 4</a></li>
+            <li><a href="#secao5">Tópico 5</a></li>
+            <li><a href="#secao6">Tópico 6</a></li>
+            <li><a href="#secao7">Tópico 7</a></li>
+            <li><a href="#secao8">Tópico 8</a></li>
+            <li><a href="#secao9">Tópico 9</a></li>
+            <li><a href="#secao10">Tópico 10</a></li>
+            <li><a href="#download">Download</a></li>
+            <li><a href="#conclusao">Conclusão</a></li>
+            <li><a href="#referencias">Refs Bibliográficas</a></li>
+        </ul>
+    </div>
+    <!-- Título -->
+    <section id="titulo" class="titulo-intro">
+        <h1 class="titulo-programa">PROGRAMA DE ATUALIZAÇÃO</h1>
+    </section>
+    
+    <!-- Capa do Livro -->
+    <section id="capa-livro" class="capa-livro">
+        <div class="borda superior"></div>
+        <div class="conteudo-capa">
+            <h1 class="titulo-materia">LÍNGUA PORTUGUESA - NÍVEL 2</h1>
+            <h2 class="subtitulo-professor">PROFª VALÉRIA SILVA ROSA DE ALMEIDA</h2>
+        </div>
+        <div class="borda inferior"></div>
+    </section>
+    <!-- Seção Introdução -->
+    <section id="introducao" class="introducao">
+        <!-- Barra Superior -->
+        <div class="barra-superior">
+            <h1 class="titulo-barra">UNIDADE 5 | A PRODUÇÃO DE ARTIGO DE OPINIÃO</h1>
+        </div>
+    
+        <!-- Conteúdo -->
+        <div class="conteudo-introducao">
+            <div class="caixa-texto">
+                <h1 class="titulo-introducao">INTRODUÇÃO</h1>
+                <p>Olá estudante!</p>
+                <p>
+                    O artigo de opinião é um gênero textual argumentativo que desempenha um papel fundamental na
+                    construção do pensamento crítico e na defesa de ideias sobre temas relevantes da sociedade. Com
+                    circulação ampla na mídia impressa e digital, esse tipo de texto tem como principal objetivo persuadir o
+                    leitor, utilizando argumentos sólidos para sustentar um ponto de vista.
+                </p>
+                <p>
+                    Nesta unidade, você explorará as características estruturais e linguísticas do artigo de opinião,
+                    compreendendo como construir argumentos consistentes e identificar diferentes tipos de estratégias
+                    argumentativas. A partir desse conhecimento, será possível aprimorar sua escrita, desenvolvendo textos
+                    mais persuasivos e bem fundamentados.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="secao1" class="secao1">
+        <h1>
+            1. O ARTIGO DE OPINIÃO
+        </h1>
+        <p>
+            <strong>ARTIGO DE OPINIÃO</strong> é uma situação específica de produção escrita com argumentação explícita, <strong>emitindo
+            uma opinião pessoal.</strong> O artigo aborda um <strong>tema atual</strong>, de <strong>ordem social, política, econômica ou cultural.</strong>
+            Ele <strong>serve para defender uma posição, reforçando, assim, a representação de situação argumentativa.</strong>
+            O artigo geralmente circula na imprensa escrita, espaço de ampla comunicação pública. Ele pode ser visto
+            como um <strong>papel de influência no pensamento de seus destinatários</strong> (leitores), isto é, pode construir ou
+            transformar (mudar, reforçar ou enfraquecer) a posição ou o comportamento dos destinatários.
+        </p>
+        <div class="container-box">
+            <div class="content">
+                <p class="textimg">
+                    Apesar do artigo de opinião ser uma produção
+                    escrita, ele deve apresentar opiniões e
+                    argumentos coerentes os quais podem
+                    acontecer também, oralmente.<br><br>
+                    Apesar de não fazer parte da ESFERA
+                    ACADÊMICA (ESCOLAR), o artigo de
+                    opinião apresenta certas características
+                    imprescindíveis à argumentação a fim de
+                    <strong>aprimorar o desempenho pessoal, social
+                    e profissional do indivíduo.</strong>
+                </p>
+                <div class="imagem-wrapper">
+                    <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1743612928/zabosrfaoedbk9yhlbm0.jpg"
+                        alt="Imagem representativa">
+                </div>
+            </div>
+            <br>
+            <p class="description"><strong>Descrição da imagem:</strong>
+                Ilustração vista de cima de uma pessoa digitando em um laptop. Ao redor, sobre o fundo azul esverdeado,
+                há diversos itens relacionados ao trabalho e à escrita: um bloco de anotações, papéis com anotações, uma caneta, um
+                telefone,
+                uma câmera, um microfone, um jornal com a palavra “NEWS” em destaque, além de um café e um celular.
+            </p>
+        </div>
+        <p>
+            Por exemplo, sabemos muito bem que a competição em todos os âmbitos de nossa vida é muito difícil
+            e complexa. Por exemplo, um arquiteto é procurado para fazer um projeto de uma casa. Logicamente
+            o cliente tende a visitar outros para estabelecer comparações. Receberá o projeto quem melhor fizer
+            usos de argumentos convincentes e palpáveis; quem souber <strong>defender posições, reforçando, assim, a
+            representação de situação argumentativa.</strong>
+        </p>
+        <p>
+            Uma professora precisa resolver um impasse entre dois alunos de um 4º ano do Ensino Fundamental.
+            Ela deve saber argumentar e emitir opiniões e soluções do que ocorreu para influenciá-los de um modo
+            positivo e acabar de uma vez por todas as desavenças entre os dois.
+            Quem domina os argumentos, dominará as ideias, o debate, a discussão!
+        </p>
+        <h1 id="secao22">
+            2. POR QUE TRABALHAR ARTIGOS DE OPINIÃO
+        </h1>
+        <p>
+            Artigos de opinião publicados em jornais, revistas e sites e, demais meios de comunicação, discutem
+            <strong>questões polêmicas</strong> que afetam um grande número de pessoas. Assim, a linguagem utilizada para
+            esse tipo de gênero textual deve estar inserida no padrão culto da língua portuguesa. Vale ressaltar que
+            como todo texto escrito, o artigo de opinião também deve ser construído de acordo com as três partes
+            constitutivas do mesmo: introdução, desenvolvimento e conclusão. Entretanto, precisamos adequá-lo em
+            um determinado <strong>contexto de produção.</strong>
+        </p>
+        <p>
+            Além de exigir o uso da argumentação, eles supõem a discussão de problemas que envolvem a coletividade.
+            Ler, compreender e produzir artigos de opinião, portanto, é uma forma de estar no mundo de um modo
+            mais inteiro, menos passivo, menos alienado. Ele serve também para construir o conhecimento e mudar
+            a nossa atitude, comportamento a respeito de um assunto.
+        </p>
+        <p>
+            Entender o ponto de vista do outro e dialogar com ele, concordando ou discordando, defender suas próprias
+            opiniões de forma sólida e convincente nos torna <strong>sujeitos (e ativos!) da nossa própria história de vida.</strong>
+        </p>
+    </section>
+    <section class="secao2" id="secao3">
+        <h1>
+            3. RECONHECENDO ARTIGOS DE OPINIÃO
+        </h1>
+        <p>
+            A seguir, você vai verificar alguns exemplos que vão te auxiliar com as características de um artigo de
+            opinião.
+        </p>
+        <div class="tabs-container">
+            <div class="tabs-header">
+                <button class="tab-button" data-tab="tab1">EXEMPLO 1</button>
+                <button class="tab-button" data-tab="tab2">EXEMPLO 2</button>
+            </div>
+            <div class="tabs-content">
+                <div id="tab1" class="tab-content">
+                    <h4>CADA INDIVÍDUO É RESPONSÁVEL POR SUA CONDUTA</h4>
+                    <p class="textimg"><span class="text-italic">
+                        <strong>Cassildo Souza</strong><br><br>
+                        Atribuir à sociedade como um todo a culpa por certos comportamentos errôneos não
+                        parece, em minha maneira de pensar, uma atitude sensata. Costumamos ouvir por aí
+                        coisas do tipo “O Brasil não tem mais jeito”, “O povo brasileiro é corrupto por natureza”,
+                        “Todas as pessoas são egoístas” e frases afins. Essa é uma visão já cristalizada no
+                        pensamento de boa parte de nosso povo.<br><br>
+                        Entretanto, se há equívocos, se existem erros, se modos ilícitos são verificados, eles
+                        sempre terão partido de um indivíduo. Mesmo que depois essas práticas se propaguem,
+                        somente serão contaminados por elas aqueles que assim o desejarem. Uma corporação
+                        que, por exemplo, está sob investigação criminal em decorrência da ação de alguns de
+                        seus componentes, não estará necessariamente corrompida em sua totalidade. Aliás, a
+                        meu juízo, isso é quase impossível de acontecer.<br><br>
+                        É preciso compreender que nem todo mundo se deixa influenciar por ações fraudulentas. De repente o que alguém acha
+                        interessante pode ser considerado totalmente inviável por outra pessoa e não acredito que seja justo um ser humano ser
+                        responsabilizado apenas por fazer parte de um grupo “contaminado”, mesmo sem ele, o cidadão, ter exercido qualquer coisa
+                        que comprometa a sua idoneidade moral.<br><br>
+                        Todos sabemos que um indivíduo é constituído suficientemente para pagar por suas
+                        falcatruas. Por isso, não concordo que haja julgamento geral. É preciso que saibamos
+                        separar o bom do ruim, o honesto do corrupto, o bom-caráter do mau-caráter, o
+                        dissimulado do verdadeiro. Todos têm consciência do que seja certo ou errado e devem
+                        carregar sozinhos o fardo de terem sido desleais, incorretos e vulgares, sem manchar
+                        a imagem daqueles que, por vias do destino, constituem certas facções que não
+                        apresentam, totalitariamente, uma conduta legal.
+                    </span>
+                    </p>
+                    <p class="fonte-imagem">
+                        <span class="text-italic"><strong>Fonte:</strong> https://centraldasletras.blogspot.com/p/modelos-de-redacao.html</span>
+                    </p>
+                </div>
+                <div id="tab2" class="tab-content">
+                    <h4>PREVENIR OU REMEDIAR</h4>
+                    <p class="textimg"><span class="text-italic">
+                            <strong>Cassildo Souza</strong><br><br>
+                            Entre os debates mais intensos que permeiam a sociedade atual, uma questão que não pode ser colocada em segundo plano é
+                            a descriminalização do aborto. Os que defendem tal legalidade afirmam que, uma vez aprovada, a lei priorizaria o acesso
+                            a métodos seguros de extração, em caso de gravidez indesejada, com a justificativa de preservar a vida da mãe. Porém, o
+                            caminho mais coerente seria incentivar a prevenção, ao invés de se alimentar à prática de um crime na mais aceitável
+                            significação da palavra.<br><br>
+                            Vivemos em um mundo rodeado de informações e, as campanhas promovidas pelos órgãos de saúde competentes, se não são
+                            ideais, também não permitem alegar-se falta de conhecimento a respeito do assunto. Por ano, são distribuídos milhões de
+                            camisinhas e outros mecanismos capazes de evitar que o indesejado – quase sempre inesperado – aconteça. Se, mesmo assim,
+                            o índice de adolescentes que dão a luz cresce assustadoramente a cada ano, com a possibilidade de o aborto tornar-se
+                            legal, isso aumentaria numa velocidade ainda maior.<br><br>
+                            Não sendo bem sucedidas como deveriam as estratégias de conscientização para prevenir a gravidez, como em qualquer outra
+                            campanha, outros meios devem ser criados. Descriminalizar o aborto, além de constituir uma motivação para o
+                            descompromisso com a vida, atesta a incapacidade do Estado para resolver questões sérias e urgentes.<br><br>
+                            A atitude mais sensata é sempre eliminar o problema em sua origem, em qualquer que seja a situação para sanar algo que
+                            poderia ter sido suprimido no passado, como aconteceu com várias doenças. Os exemplos do insucesso estão em toda parte:
+                            por não investirmos em educação é que corremos atrás de bandido, vivemos inúmeras epidemias e, para completar, ainda
+                            queremos permitir a castração de uma vida, antes mesmo de ser concretizada.
+                        </span>
+                    </p>
+                    <p class="fonte-imagem">
+                        <span class="text-italic"><strong>Fonte:</strong>
+                            https://centraldasletras.blogspot.com/p/modelos-de-redacao.html</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <p>
+            Esse artigo de opinião, como você percebeu é contra a <strong>legalização do aborto</strong>. Pode haver outros artigos
+            a favor dela. Verifique, porém, os argumentos apresentados pelo escritor.
+        </p>
+        <p>
+            Vamos agora ler um outro artigo de opinião com <strong>o mesmo tema</strong> para que você possa perceber outras
+            características que um artigo de opinião possa ter – inclusive de linguagem.
+        </p>
+        <div class="small-frameg">
+            <h4 class="text-left">Só a informação não dá conta do recado</h4>
+            <h4 class="text-right">Jairo Bouer</h4>
+            <p>
+                Recebi na última semana um e-mail de uma leitora atenta aos textos da coluna e observadora do
+                comportamento dos jovens da sua escola. Vale a pena ler alguns trechos desse texto: “Apesar de
+                tanta informação bem-intencionada, muitos dos comportamentos e situações de risco seguem
+                acontecendo. Na minha escola, agora mesmo, há umas oito garotas grávidas, de 14 a 16 anos,
+                e uma menina que se assumiu ser homossexual e é ridicularizada e excluída dos grupos”.
+            </p>
+            <p>
+                “Sabe? Você pensa que, depois que a escola abriu espaço para discussão de temas que
+                antes eram tabus, principalmente no que diz respeito a sexo, agora que você pode ligar a
+                sua televisão, comprar uma revista, ler uma coluna de jornal e encontrar alguém falando
+                ou escrevendo sobre AIDS, gravidez na adolescência, preconceito, sexo tântrico etc., o
+                comportamento não vai acontecer do mesmo jeito que acontecia antes? Engano!”
+            </p>
+            <p>
+                “Parece que existe um fosso entre o discurso e a ação. E o que é pior: que o foco de
+                tanta informação acaba sendo a informação por ela mesma. Eu quero dizer: ela não chega
+                realmente às pessoas. Até por que, por mais que se tenham democratizado os espaços
+                para dar informação, não se fez o mesmo com o tempo. As pessoas correm demais na
+                ânsia de ter coisas, consumir, sobreviver. Com isso, vão fazendo de conta que escutam,
+                que entenderam a mensagem, mas...”
+            </p>
+            <p>
+                E digo mais: além da falta de tempo para prestar atenção às mensagens, muitas vezes o
+                tal fosso entre discurso e ação se deve às complexas emoções que habitam as pessoas.
+                Tanto sentimentos negativos (problemas de autoestima, tristeza, sensação de exclusão)
+                como sentimentos supostamente positivos (paixão, alegria, autoconfiança) podem deixar o
+                jovem mais vulnerável e exposto ao risco.
+            </p>
+            <p>
+                É como se a emoção fechasse os olhos da lógica e da razão. Fica a pergunta: será que não
+                dá para juntar tudo no mesmo barco? A gente não pode viver uma emoção (boa ou má) e, ao
+                mesmo tempo, se cuidar e evitar problemas? Lógico que sim! Se só a informação não basta,
+                cabe a cada um de nós aprender a lidar com nossas emoções e a administrar a forma como a
+                informação é usada! (...)
+            </p>
+            <p class="fonte-imagem">
+                <span class="text-italic"><strong>Fonte:</strong>
+                    https://centraldasletras.blogspot.com/p/modelos-de-redacao.html</span>
+            </p>
+        </div>
+        <p>
+            Como você deve ter percebido, todo artigo de opinião apresenta questões controversas, além das posições
+            defendidas e seus respectivos argumentos para a defesa da posição. Verifique no quadro abaixo como
+            essas questões se processam.
+        </p>
+        <div class="flip-card-container">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h4>
+                            Questão Controversa
+                        </h4>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>
+                            Só informação garante um comportamento sexual seguro de jovens casais?
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h4>
+                            Posição defendida pela autora citada
+                        </h4>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>
+                            Não. Há um fosso entre discussão e ação, que se deve, em grande parte, à falta de tempo.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h4>
+                            Posição defendida pelo autor do texto
+                        </h4>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>
+                            Não. Há um fosso entre discussão e ação, devido não só à falta de tempo, como também às complexas emoções que as pessoas
+                            possuem.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h4>
+                            Argumento utilizado pela autora citada
+                            para defender sua posição
+                        </h4>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>
+                            Os espaços de informação foram democratizados, mas não o tempo das pessoas, que na correria fazem de conta que
+                            entenderam a mensagem.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h4>
+                            Argumento utilizado pelo autor do texto
+                            para defender sua posição
+                        </h4>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>
+                        Sentimentos positivos e negativos deixam o jovem mais exposto ao risco.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h4>
+                            Conclusão do autor
+                        </h4>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>
+                            É possível e necessário juntar razão e emoção.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p>
+            Outras possibilidades de preenchimento do esquema são possíveis, desde que sejam coerentes.
+        </p>
+        <p>
+            Percebemos, portanto, que o objetivo é desenvolver sua capacidade para construir seu conhecimento
+            a respeito de vários assuntos e compreender. Você leu vários textos desse gênero, percebeu como
+            analisá-los – os textos defendem uma opinião? Ele discute um fato polêmico, controverso?, isto é, não
+            há um consenso entre todas as pessoas sobre o tema. Percebeu também como “conversar” com eles – a
+            linguagem, geralmente apresenta a 1ª. pessoa, pois há um “diálogo” entre o escritor e o leitor -, observar
+            suas características, identificar argumentos e aprender a construí-los e, discutir sobre várias questões.
+        </p>
+        <p>
+            Em outro tópico desta unidade, explicarei com mais detalhes a respeito de QUESTÃO CONTROVERSA.
+        </p>
+        <p>
+            A eficiente <strong>ANÁLISE</strong> de um artigo de opinião deve ser centrada nesses questionamentos:
+        </p>
+        <div class="topico-texto">
+            <ul>
+                <li><span class="topico-destaque"><strong>▸ </strong>Qual a tese (posição) central defendida pelo autor?</span></li>
+                <li><span class="topico-destaque"><strong>▸ </strong>Que argumentos foram apresentados em defesa dessa tese?</span></li>
+                <li><span class="topico-destaque"><strong>▸ </strong>A quem se dirige o texto lido?</span></li>
+            </ul>
+        </div>
+        <p>
+            Além desses pontos, você deve refletir (pensar) nas seguintes circunstâncias, após ter lido um artigo de
+            opinião:
+        </p>
+        <div class="topico-texto">
+            <ul>
+                <li><span class="topico-destaque"><strong>▸ </strong>Concordo com a posição (tese) do autor.</span>
+                </li>
+                <li><span class="topico-destaque"><strong>▸ </strong>Não concordo com a posição (tese), mas reconheço que a(s) argumentação(ões) foi (foram) boa(s) e relevante(s).</span></li>
+                <li><span class="topico-destaque"><strong>▸ </strong>Não há nenhuma posição do autor frente ao tema e a(s) argumentação(ões) “não tem pé nem cabeça”.</span></li>
+                <li><span class="topico-destaque"><strong>▸ </strong>A posição parece relevante, mas não é universal.</span></li>
+            </ul>
+        </div>
+        <h1 id="secao4">
+            4. COMO ESTRUTURAR UM ARTIGO DE OPINIÃO
+        </h1>
+        <p>
+            Descubra acessando os botões a seguir, as principais características desse gênero textual e como elas
+            ajudam a estruturar argumentos.
+        </p>
+        <!-- Accordions -->
+        <div class="accordion-container-diferente">
+            <!-- Primeiro Accordion -->
+            <div class="accordion-diferente">
+                <div class="accordion-header-diferente">
+                    CONTEXTO
+                    <i class="bx bx-chevron-down accordion-icon-diferente"></i>
+                </div>
+                <div class="accordion-content-diferente">
+                    <p>
+                        O produtor (escritor) deve oferecer resposta a uma questão controversa (polêmica),
+                        colocada pelo jornal etc como discutível.
+                    </p>
+                </div>
+            </div>
+        
+            <!-- Segundo Accordion -->
+            <div class="accordion-diferente">
+                <div class="accordion-header-diferente">
+                    TEMA
+                    <i class="bx bx-chevron-down accordion-icon-diferente"></i>
+                </div>
+                <div class="accordion-content-diferente">
+                    <p>
+                        Atual, de ordem social, política, econômica ou cultural, determinado pelos meios de
+                        comunicação como relevante. Não há consenso na sociedade sobre a questão.
+                    </p>
+                </div>
+            </div>
+            <!-- terceiro Accordion -->
+            <div class="accordion-diferente">
+                <div class="accordion-header-diferente">
+                    PRODUTOR
+                    <i class="bx bx-chevron-down accordion-icon-diferente"></i>
+                </div>
+                <div class="accordion-content-diferente">
+                    <p>
+                        Imagem de si mesmo / Figura de autoridade (governo, sindicato, academia, judiciário,
+                        empresa etc).
+        
+                    </p>
+                </div>
+            </div>
+            <!-- Quarto Accordion -->
+            <div class="accordion-diferente">
+                <div class="accordion-header-diferente">
+                    SUPORTE
+                    <i class="bx bx-chevron-down accordion-icon-diferente"></i>
+                </div>
+                <div class="accordion-content-diferente">
+                    <p>
+                        Imagem do jornal / papel social do jornal / influência opiniões. Função da coluna do jornal
+                        / outros textos com posicionamentos diferentes.
+                    </p>
+                </div>
+            </div>
+            <!-- Quinto Accordion -->
+            <div class="accordion-diferente">
+                <div class="accordion-header-diferente">
+                    DESTINATÁRIO
+                    <i class="bx bx-chevron-down accordion-icon-diferente"></i>
+                </div>
+                <div class="accordion-content-diferente">
+                    <p>
+                        Imagem do leitor / leitores fiéis do jornal / especialistas sobre a questão ao escreverem o
+                        artigo, com a finalidade de atualizar e informar leitores / elite sociocultural.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Sexto Accordion -->
+            <div class="accordion-diferente">
+                <div class="accordion-header-diferente">
+                    OBJETIVO
+                    <i class="bx bx-chevron-down accordion-icon-diferente"></i>
+                </div>
+                <div class="accordion-content-diferente">
+                    <p>
+                        Construir / transformar (mudar, reforçar, enfraquecer) a posição (opinião) ou
+                        comportamento do leitor.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="secao1" id="secao5">
+        <h1>
+            5. O CONTEÚDO DOS ARTIGOS DE OPINIÃO – QUESTÕES POLÊMICAS
+            (CONTROVERSAS)
+        </h1>
+        <p>
+            Por quê e para que argumentamos? Sobre quais assuntos argumentamos? Observe as afirmações abaixo:
+        </p>
+        <div class="topico-texto">
+            <ul>
+                <li><span class="topico-destaque"><strong>▸ </strong><span class="text-italic">A terra gira em torno do sol.</span></span></li>
+                <li><span class="topico-destaque"><strong>▸ </strong><span class="text-italic">A bactéria é um ser vivo.</span></span></li>
+                <li><span class="topico-destaque"><strong>▸ </strong><span class="text-italic">O filme “Cidade de Deus” concorreu ao Oscar de melhor filme, mas não ganhou.</span></span></li>
+                <li><span class="topico-destaque"><strong>▸ </strong><span class="text-italic">O governo federal encaminhou ao Congresso Nacional um projeto de lei que estabelece novos critérios de acesso ao ensino universitário.</span></span>
+                </li>
+            </ul>
+        </div>
+        <p>
+            <strong>As duas primeiras frases</strong> afirmam verdades científicas que, levando em conta os conhecimentos científicos
+            acumulados até os dias de hoje, podem ser comprovadas. Assim, não cabe contestá-las ou argumentar a
+            favor ou contra. Pode-se, no máximo, explicar o movimento de translação e por que a bactéria é um ser vivo.
+            <strong>As duas outras frases</strong> dizem respeito a fatos ocorridos, diante dos quais também não cabe nenhum tipo
+            de contestação – o filme concorreu e não ganhou e o governo encaminhou um projeto de lei ao Congresso
+            Nacional. <strong>Nos quatro exemplos temos, então, fatos que não podem ser negados ou questionados.</strong>
+        </p>
+        <p>
+            Entretanto, em relação aos <strong>dois últimos fatos</strong>, podemos considerar: foi injusto ou justo o Brasil ter perdido
+            o Oscar? O projeto de lei que o governo encaminhou é equivocado ou é uma medida necessária? Diante
+            dessas perguntas cabem contestações, refutações, opiniões diferentes. São afirmações que não dizem
+            respeito a <strong>fatos inquestionáveis, mas sim a opiniões.</strong> Ora, em matéria de opinião, como cada um pode
+            ter uma posição diferente diante dessas questões, só é possível argumentar. E argumentar é mais do
+            que simplesmente dar opinião sobre algo – é <strong>sustentá-la</strong> com argumentos, que são razões, evidências,
+            provas, dados etc. que dão suporte à ideia defendida. <strong>Assim, para convencer alguém de que certas
+            posições, ideias ou teses são as mais acertadas ou adequadas, argumenta-se.</strong>
+        </p>
+        <h1 id="secao6">
+            6. TIPOS DE ARGUMENTOS
+        </h1>
+        <p>
+            O <strong>OBJETIVO</strong> desse item é apresentar alguns tipos de argumentos para que você possa reconhecê-lo nos
+            textos lidos, o que pode ajudá-lo na compreensão e na utilização em suas produções, ampliando suas
+            possibilidades argumentativas, tanto as escritas quanto as orais.
+        </p>
+        <p>
+            Vale ressaltar que argumentos não se sustentam se forem baseados em: generalizações, estereótipos,
+            clichês, crendices populares, falsas analogias, opiniões meramente subjetivas e sem dados concretos,
+            dentre outros.
+        </p>
+        <p>
+            Leia os trechos a seguir, e verifique a ideia ou tese que o autor quer defender e seu argumento.
+        </p>
+        <!-- SEGUNDA SEÇÃO DE TABS (COM OUTRA COR) -->
+        <div class="tabs-container tabs-container-alt">
+            <div class="tabs-header">
+                <button class="tab-button" data-tab="tab3">TRECHO 1</button>
+                <button class="tab-button" data-tab="tab4">TRECHO 2</button>
+                <button class="tab-button" data-tab="tab5">TRECHO 3</button>
+            </div>
+            <div class="tabs-content">
+                <div id="tab3" class="tab-content">
+                    <p class="textimg">
+                        “Nos países que passaram a ter a pena de morte prevista no código penal - os Estados
+                        Unidos são um exemplo disso - não houve uma diminuição significativa do índice de
+                        criminalidade. Donde podemos concluir que a existência legal da pena de morte não inibe
+                        a criminalidade.”
+                    </p>
+                    <p class="fonte-imagemr">
+                        <span class="text-italicr">https://www.politize.com.br/pena-de-morte-brasil-argumentos/</span>
+                    </p>
+                    <p class="textimg">
+                        O autor quer defender que “Nos países ............ criminalidade.”
+                    </p>
+                    <p class="textimg">
+                        O argumento é: (...)... a existência legal ...... a criminalidade.”
+                    </p>
+                </div>
+                <div id="tab4" class="tab-content">
+                    <p class="textimg">“Toda atitude racista deve ser denunciada e combatida, posto que fere um dos princípios fundamentais da Constituição
+                    brasileira."</p>
+                    <p class="fonte-imagemr">
+                        <span class="text-italicr">https://www.uol.com.br/universa/noticias/redacao/2017/11/20/13-atitudes-racistas</span>
+                    </p>
+                    <p class="textimg">
+                    O autor quer defender que “Toda atitude ..... combatida,”
+                    O argumento é: “posto que ..... brasileira.”
+
+                    </p>
+                </div>
+                <div id="tab5" class="tab-content">
+                    <p class="textimg">
+                        A função principal da escola média não deve ser a preparação especializada para o trabalho e, ao contrário do que se
+                        possa pensar, essa não é uma ideia recente. No século passado, <strong>Einstein</strong> já se opunha à ideia de que a escola devesse
+                        ensinar conhecimento ou técnicas específicas que uma pessoa fosse utilizar mais tarde na sua vida. Considerava que as exigências da vida são muito
+                        variadas para que a escola pudesse dar conta delas. Afirmava ser contra tratar um indivíduo como "ferramenta morta" e
+                        considerava, portanto, que a escola deveria ter como meta formar jovens com personalidade harmoniosa, capazes de pensar
+                        e com autonomia para julgar. Como brilhante cientista que era, antevendo o desenvolvimento tecnológico, sustentava que,
+                        se uma pessoa dominasse o fundamental na sua área de interesse e tivesse aprendido a pensar e a trabalhar de maneira
+                        autônoma, poderia se adaptar mais facilmente ao progresso e às mudanças e encontrar seu caminho na vida profissional, ao
+                        contrário de uma pessoa que tivesse tido um treinamento em um conhecimento especializado.
+                    </p>
+                    <p class="fonte-imagemr">
+                        <span class="text-italicr">http://acessapv.blogspot.com/2011/03/principal-funcao-da-escola-media-deve.html</span>
+                    </p>
+                    <p class="textimg">
+                        O autor defende que “A função principal da escola média não deve ser a preparação especializada para o trabalho, ela
+                        deveria ter como meta formar jovens com personalidade harmoniosa, capazes de pensar e com autonomia para julgar.”
+                        Os argumentos são vários, desde “ (....) uma pessoa dominasse .... até ....especializado.”
+                    </p>
+                </div>
+            </div>
+        </div>
+        <p>
+            Estudiosos da argumentação propuseram diferentes classificações de argumentos. Observe alguns tipos
+            a seguir.
+        </p>
+        <!-- Acordeons -->
+        <div class="acordeon-container">
+            <!-- Primeiro acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-header">
+                    Argumento de Autoridade
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-content">
+                    <p>
+                        A ideia se sustenta pela citação de uma fonte confiável, que pode ser um especialista no
+                        assunto ou dados de instituição de pesquisa, uma frase dita por alguém, líder ou político,
+                        algum artista famoso ou algum pensador, enfim, uma autoridade no assunto abordado. A
+                        citação pode auxiliar e deixar consistente a tese.
+                    </p>
+                    <div class="quadroacordeon">
+                        <p>
+                            “O cinema nacional conquistou nos últimos anos qualidade e faturamento nunca
+                            vistos antes. ‘Uma câmera na mão e uma ideia na cabeça’ - a famosa frase-conceito
+                            do <strong>diretor Glauber Rocha</strong> – virou uma fórmula eficiente para explicar os R$130
+                            milhões que o cinema brasileiro faturou no ano passado”.
+                        </p>
+                        <p class="fonte-imagemr">
+                            <strong>Adaptado da Revista Época, 14/04/2004.</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Segundo acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-header">
+                    Argumento de Provas Concretas ou Princípio
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-content">
+                    <p>
+                        A justificativa é legítima, faz apelo aos princípios, o que torna a conclusão quase que
+                        incontestável, não há o que questionar. Esses argumentos evidenciam a tese por meio de
+                        informações concretas, extraídas da realidade.
+                    </p>
+                    <div class="quadroacordeon">
+                        <p>
+                            “No caso do Brasil, homicídios estão assumindo uma dimensão terrivelmente grave.
+                            De acordo com os mais recentes dados divulgados pelo IBGE, sua taxa mais que
+                            dobrou ao longo dos últimos 20 anos, tendo chegado à absurda cifra anual de 27
+                            por mil habitantes. Entre homens jovens (de 15 a 24 anos), o índice sobe a incríveis
+                            95,6 por mil habitantes”.
+                        </p>
+                        <p class="fonte-imagemr">
+                            <strong>Folha de S. Paulo. 14/04/2004.</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Terceiro acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-header">
+                    Argumento por Causa e Consequência
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-content">
+                    <p>
+                        Esse tipo de argumento relaciona conceitos de causalidade e efeito com o objetivo de
+                        evidenciar as consequências imediatas de determinado ato (retirado das provas) praticado
+                        pelas partes. Para comprovar uma tese, você pode buscar as relações de causa (os motivos,
+                        os porquês) e de consequência (os efeitos, a decorrência).
+                    </p>
+                    <div class="quadroacordeon">
+                        <p>
+                            “Ao se desesperar em um congestionamento em São Paulo, daqueles em que o
+                            automóvel não se move nem quando o sinal está verde, o indivíduo deve saber que,
+                            por trás de sua irritação crônica e cotidiana, está uma monumental ignorância histórica.
+                            São Paulo só chegou a esse caos porque um seleto grupo de dirigentes decidiu, no
+                            início do século, que não deveríamos ter metrô. Como cresce dia a dia o número de
+                            veículos, a tendência é piorar ainda mais o congestionamento – o que leva técnicos
+                            a preverem como inevitável a implantação de perigos”.
+                        </p>
+                        <p class="fonte-imagemr">
+                            <strong>Adaptado de Folha de S. Paulo. 01/10/2000</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quarto acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-header">
+                    Argumento de Exemplificação ou Ilustração
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-content">
+                    <p>
+                        A exemplificação consiste no relato de um pequeno fato (real ou fictício). Esse recurso
+                        argumentativo é amplamente usado quando a tese defendida é muito teórica e carece de
+                        esclarecimentos com mais dados concretos.
+                    </p>
+                    <div class="quadroacordeon">
+                        <p>
+                            “A condescendência com que os brasileiros têm convivido com a corrupção não
+                            é propriamente algo que fale bem de nosso caráter. Conviver e condescender
+                            com a corrupção não é, contudo, praticá-la, como queria um líder empresarial que
+                            assegurava sermos todos corruptos. Somos mesmo? Um rápido olhar sobre nossas
+                            práticas cotidianas registra a amplitude e a profundidade da corrupção, em várias
+                            intensidades.
+                            Há a pequena corrupção, cotidiana e muito difundida. É, por exemplo, a da secretária
+                            da repartição pública que engorda seu salário datilografando trabalhos “para fora”,
+                            utilizando máquina, papel e tempo que deveriam servir à instituição. Os chefes
+                            justificam esses pequenos desvios com a alegação de que os salários públicos são
+                            baixos. Assim, estabelece-se um pacto: o chefe não luta por melhores salários de
+                            seus funcionários, enquanto estes, por sua vez, não “funcionam”. [...]
+                        </p>
+                        <p class="fonte-imagemr">
+                            <strong>Jaime Pinksky/Luzia Nagib Eluf. Brasileiro(a) é Assim Mesmo, Ed. Contexto.</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quinto acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-header">
+                    Argumento de Senso Comum
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-content">
+                    <p>
+                        É aquele que invoca princípio genérico, indiscutível, conhecido por toda a sociedade, seu
+                        efeito suasório é reduzido e, por isso, ele deve ser utilizado como reforço a um argumento
+                        mais específico.
+                    </p>
+                    <div class="quadroacordeon">
+                        <p>
+                            “Sabe-se que quem tem o nome incluído no SPC passa por uma situação
+                            constrangedora. Sendo assim, aquele cujo nome foi inserido indevidamente nesse
+                            cadastro tem direito à indenização por danos morais.
+                        </p>
+                        <p class="fonte-imagemr">
+                            <strong>Adaptado de Folha de S. Paulo. 09/10/2005.</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="outer-background">
+        <!-- Seção Saiba Mais - Retângulo de Fundo -->
+        <section class="background-section">
+            <!-- Círculo Verde -->
+            <div class="circle-green">
+                <!-- Círculo Branco com ícone -->
+                <div class="circle-white">
+                    <i class='bx bx-book-reader'></i>
+                </div>
+            </div>
+            <div class="transparent-section">
+                <h1 class="learn-more-title">SAIBA MAIS</h1>
+                <p class="learn-more-paragraph">
+                    <strong>Fortaleça seus textos com argumentos eficazes!</strong><br><br>
+                    Conheça os diferentes tipos de argumentos que podem ser utilizados em um artigo de
+                    opinião e aprenda a selecionar aqueles que tornam sua argumentação mais persuasiva
+                    e consistente.
+                </p>
+                <!-- Ícone de Play -->
+                <div class="play-icon" data-video="https://www.youtube.com/embed/PqIkbM0CsGM?si=xPwyh0PikwYiAssY"
+                    onclick="openVideoModal(this)">
+                    <i class='bx bx-play-circle'></i>
+                </div>
+            </div>
+            <!-- Modal com o vídeo -->
+            <div id="videoModal" class="video-modal" onclick="closeVideoModal()">
+                <div class="video-content" onclick="event.stopPropagation()">
+                    <i class="bx bxs-x-circle close-btn" onclick="closeVideoModal()"></i>
+                    <iframe id="videoIframe" width="800" height="450" src="" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="secao2" id="secao7">
+        <h1>
+            7. O CONTEXTO DE PRODUÇÃO DE UM ARTIGO ACADÊMICO
+        </h1>
+        <div class="galeria">
+            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1743746660/bnonih4wdexoyx1cor7j.jpg" alt="Imagem 1">
+            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1743746660/pta7pdyx7bontf9sde8n.jpg" alt="Imagem 2">
+            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1743746660/i41otwmj0usfruwhzga1.jpg" alt="Imagem 3">
+            <div class="fonte-vertical"><strong>Fonte:</strong> 123RF</div>
+        </div>
+        <p>
+            Como você deve lembrar, o contexto de produção é um processo necessário para entender os vários
+            gêneros textuais. No <strong>ARTIGO DE OPINIÃO</strong> esse contexto também está presente porque todo texto que
+            escrevemos ou lemos possui um <strong>contexto</strong>. Os textos não existem “no vazio”, mas em um determinado
+            contexto de produção, levando em consideração não só os elementos elencados a seguir que interferem
+            no sentido dos textos, como também na leitura, para que seja possível compreender mais efetivamente o
+            que se leu. Portanto, alguns elementos são essenciais. Eles devem ser escritos
+        </p>
+        <div class="topico-texto">
+            <ul>
+                <li><span class="topico-destaque"><strong>▸ </strong>Por alguém. O <strong>PRODUTOR</strong>, geralmente, especialista no assunto ou, no mínimo, alguém que estuda aspectos da questão em discussão ou um representante de determinada instituição social (sindicatos, governo, universidades, ONGS etc) que, de alguma forma, tem algo a dizer sobre a questão.</span>
+                </li>
+                <li><span class="topico-destaque"><strong>▸ </strong>Para alguém. Os <strong>LEITORES</strong>, pessoas que frequentemente leem determinado jornal ou revista.</span></li>
+                <li><span class="topico-destaque"><strong>▸ </strong>Com certa intenção. <strong>PESSOAS</strong> que estão, de alguma forma, <strong>interessadas</strong> na questão polêmica, seja porque as afeta diretamente, seja porque se interessam pela discussão dos assuntos em pauta na sociedade.</span></li>
+                <li><span class="topico-destaque"><strong>▸ </strong>Em determinado tempo e lugar. Um artigo de opinião circula em <strong>jornais e revistas impressos ou on-line.</strong></span></li>
+                <li><span class="topico-destaque"><strong>▸ </strong>E <strong>divulgados</strong> em certo <strong>veículo de comunicação</strong> (livros, revistas, jornais etc).</span></li>
+            </ul>
+        </div>
+        <h1>
+            7.1 A LINGUAGEM
+        </h1>
+        <p>
+            Como um dos objetivos do Artigo de Opinião é tentar persuadir o leitor, dialogando com ele, a linguagem
+            também tem um destaque importante. Várias marcas linguísticas podem ser observadas:
+        </p>
+        <div class="slider-container">
+            <i class="bx bx-chevron-left arrow left-arrow" onclick="prevSlide()"></i>
+            <div class="slider">
+                <div class="slide">
+                    <span class="slide-texto">
+                        <strong>▸</strong> função emotiva da linguagem (ironia, apelos emotivos, acusações, humor negativo e positivo etc).
+                    </span>
+                </div>
+                <div class="slide">
+                    <span class="slide-texto">
+                        <strong>▸</strong> verbos no modo subjuntivo, indicando desejo (seja, entenda, compre, ajude, favoreça, exija).
+                        etc).
+                    </span>
+                </div>
+                <div class="slide">
+                    <span class="slide-texto">
+                        <strong>▸</strong> organizadores de texto como conectivos ou conjunções (mas, no entanto, contudo; uma vez que, de forma que etc).
+                        etc).
+                    </span>
+                </div>
+                <div class="slide">
+                    <span class="slide-texto">
+                        <strong>▸</strong> sinais de pontuação (interrogação, exclamações, aspas duplas, reticências etc, pois induzem o leitor a refletir sobre as
+                        intenções da autor.
+                    </span>
+                </div>
+                <div class="slide">
+                    <span class="slide-texto">
+                        <strong>▸</strong> Primeira pessoa do singular (eu) ou <strong>primeira</strong> pessoa do plural (nós) como forma de “dialogar” com o leitor.
+                    </span>
+                </div>
+            </div>
+            <i class="bx bx-chevron-right arrow right-arrow" onclick="nextSlide()"></i>
+        </div>
+        <p>
+            Vamos ler agora, o artigo “O desafio de reconhecer novas formas de participação”, escrito por Patrícia
+            Lânes Araújo de Souza, socióloga urbana.
+        </p>
+        <div class="small-frameg">
+            <p>
+                O (a) jovem participa da vida política do país? A resposta é quase sempre a mesma: não,
+                é um alienado(a). O que se verifica na prática não é bem isso. Grupos de hip hop, dança,
+                teatro e música, formados por jovens, pipocam nas favelas e periferias do Brasil. Isso
+                não significa participar politicamente? É preciso compreender que participação política
+                vai além do exercício do voto. Existem muitas maneiras, como se organizar em grupos
+                nas escolas, comunidades e espaços de trabalho para tentar intervir nas decisões que
+                estão sendo tomadas e mudar o rumo da história (seja da sua comunidade ou do seu
+                país). No caso dos(as) jovens não é diferente. A diferença está em como a sociedade vê
+                a juventude e o que espera dela. O mito da juventude alienada não é tão recente e toma
+                como referência uma maneira de participação referenciada na juventude das décadas
+                de 1960 e 1970, que protagonizou as manifestações contra a opressão política.
+            </p>
+            <p>
+                No Brasil, grupos de jovens estiveram ligados à resistência ao governo militar por meio
+                de núcleos teatrais, partidos e movimentos políticos clandestinos, chegando até à luta
+                armada. Foram também jovens transgressores(as) dessa época que protagonizaram
+                o rico cenário musical, gerando movimentos cuja expressão mais conhecida até hoje
+                é a Tropicália. Esse movimento de resistência foi essencial para que fosse possível, já
+                na década de 1980, a reabertura para a democracia. A ideia do jovem revolucionário
+                f
+                icou. Mas o mundo mudou nas últimas décadas. Uma então nascente cultura do
+                consumo se consolidou. [...]
+            </p>
+            <p>
+                Os(as) jovens estão se organizando talvez menos nos partidos, mas em grupos culturais
+                locais, movimentos globais, redes ou ligados as organizações de cidadania ativa. [...]
+                A discriminação de geração é um ponto complexo da participação jovem. Se junto de
+                seus semelhantes é fácil dizer o que se pensa, na presença da pessoa adulta pode
+                não ser tão simples. Mais ainda quando nem sempre a palavra e o meio pelo qual os
+                (as) jovens se sentem mais à vontade para expressar sua opinião. [...]
+            </p>
+            <p>
+                A estratégia de formação de redes por jovens não é nova. Os movimentos internacionais
+                antiglobalização, por exemplo, (em sua maioria protagonizados por jovens militantes),
+                começaram se articulando em rede pela internet. No Brasil, redes como a do Nordeste, a
+                de Belo Horizonte e a do Rio de Janeiro (Rede Jovens em Movimento) estão começando
+                a pautar questões mais amplas que dizem respeito aos (as) jovens moradores(as)
+                desses lugares, articulando diferenças em nome dos direitos da juventude e da luta
+                por políticas públicas mais inclusivas. A ideia parece estar frutificando. [...]
+            </p>
+            <h4 class="text-right"><span class="text-italic">Artigo publicado no Jornal da
+            Cidadania, abril/ maio de 2004.</span></h4>
+            <h4 class="text-right">
+                <span class="text-italic">Adaptado por Valéria Silva Rosa de Almeida.</span>
+            </h4>
+        </div>
+        <!-- Quadro com borda violeta -->
+        <h2 class="titulo-quadrov"><span class="text-greenv">Quadro 1.</span> CONTEXTO DE PRODUÇÃO</h2>
+        <div class="quadrov">
+            <!-- Imagem via link -->
+            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1743750922/qbbetzeqqziar6tbpuju.png"
+                alt="Descrição da imagem" class="imagem-quadrov" onclick="openModal(this)">
+        </div>
+        <!-- Fonte da imagem -->
+        <p class="fonte-quadrov">
+            <strong>Fonte:</strong> Elaborado pela autora.
+        </p>
+        <!-- Modal para exibir a imagem ampliada -->
+        <div id="imageModal" class="modal" onclick="closeModal()">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg">
+        </div><br>
+        <h1 id="secao8">8. EXPLORANDO A ESTRUTURA DE UM ARTIGO DE OPINIÃO</h1>
+        <p>
+            As formas de estruturar um artigo de opinião são variadas, mas, em geral, eles contêm <strong>os seguintes elementos:</strong>
+        </p>
+        <div class="topico-texto">
+            <ul>
+                <li><span class="topico-destaque">(1) Contextualização e/ou apresentação da questão em discussão.</span></li>
+                <li><span class="topico-destaque">(2) Explicitação da posição assumida.</span></li>
+                <li><span class="topico-destaque">(3) Utilização de argumentos que sustentam a posição assumida.</span></li>
+                <li><span class="topico-destaque">(4) Consideração de posição contrária e antecipação de possíveis argumentos contrários à posição assumida.</span></li>
+                <li><span class="topico-destaque">(5) Utilização de argumentos que refutam a posição contrária.</span></li>
+                <li><span class="topico-destaque">(6) Retomada da posição assumida e/ou retomada do argumento mais enfático.</span></li>
+                <li><span class="topico-destaque">(7) Proposta ou possibilidades de negociação.</span></li>
+                <li><span class="topico-destaque">(8) Conclusão (que pode ser a retomada da tese ou posição defendida).</span></li>
+            </ul>
+        </div>
+        <p>
+            Esses elementos podem vir em qualquer ordem e nem todos precisam aparecer num artigo de opinião.
+            Leia o artigo de opinião que se segue, escrito por Jairo Bouer. Ao final de cada parte você verá o número
+            correspondente aos elementos listados anteriormente. Considere como uma parte, o texto que inicia após
+            um parêntese e termina antes de outro parêntese.
+        </p>
+        <div class="small-frameg">
+            <p><span class="text-italic">
+                O Folhateen desta semana traz uma discussão importante sobre a pílula do dia seguinte
+                e os abusos que jovens casais, de todas as partes do país, têm feito desse tipo de
+                recurso. <strong>( 1 )</strong> A pílula do dia seguinte é e deveria ser encarada apenas como um método
+                emergencial para tentar evitar uma gravidez indesejada. <strong>( 2 )</strong> Mas, infelizmente, o que se
+                tem visto é que muitas garotas estão usando o método de maneira indiscriminada. <strong>( 1 )</strong>
+            </span>
+            </p>
+            <p><span class="text-italic">
+                Conhecem a velha história de tentar achar a saída, aparentemente mais fácil, para
+                resolver um problema? ‘Eu transo sem proteção e, para evitar qualquer dor de cabeça,
+                tomo a pílula do dia seguinte logo depois!’ Aposto que vocês já ouviram essa história
+                por aí! Acontece que nem tudo é tão simples como parece! <strong>( 4 )</strong>
+                </span>
+            </p>
+            <p><span class="text-italic">
+                Problemas podem acontecer! Em primeiro lugar, esse método traz uma concentração de
+                hormônios femininos bem maior do que as pílulas habituais. A ideia do método é justamente
+                dar uma ‘carga’ extra de hormônio para fazer o endométrio (parede do útero) crescer
+                rapidamente e, depois, com a queda rápida desses níveis, favorecer uma descamação do
+                útero, o que impede que um ovo fecundado se implante e se desenvolva.
+                </span>
+            </p>
+            <p><span class="text-italic">
+                Para que esse mecanismo possa funcionar, é importante que a pílula seja tomada, no
+                máximo, até 72 horas após a relação suspeita. [...] Mas é sempre bom lembrar que,
+                mesmo tomado corretamente, esse tipo de método pode não ser 100% eficaz. Existem
+                mulheres que engravidam mesmo tomando a pílula do dia seguinte no dia correto. <strong>( 3 )</strong>
+                </span>
+            </p>
+            <p><span class="text-italic">
+                Uma série de efeitos indesejáveis pode aparecer: dor de cabeça, náusea, inchaço e
+                sensação de mal-estar. O maior risco do uso frequente da pílula do dia seguinte é uma
+                verdadeira ‘bagunça’ no ciclo hormonal. As sucessivas ‘cargas extras’ de hormônio
+                podem desregular o controle do próprio organismo sobre a menstruação. A mulher fica
+                sem saber quando é, de fato, seu período fértil. <strong>( 3 )</strong>
+                </span>
+            </p>
+            <p><span class="text-italic">
+                Outro erro frequente é esquecer que a relação sexual desprotegida não traz apenas a
+                gravidez indesejada como consequência, mas também o risco de DSTs e de AIDS. <strong>( 3 )</strong> [...]
+                </span>
+            </p>
+            <p><span class="text-italic">
+                De fato, o casal deveria investir mesmo é no uso da camisinha e de um método
+                anticoncepcional regular (como a pílula anticoncepcional) e reservar a contracepção
+                de emergência apenas para as situações em que um problema acontecer (a camisinha
+                estourar, a garota esquecer de tomar a pílula convencional etc.). E seria bom que o
+                uso sempre fosse feito com o conhecimento e o aval do médico ginecologista. Dessa
+                forma, a garota estaria mais protegida em todos os sentidos. <strong>( 8 )</strong>
+                </span>
+            </p>
+            <h4 class="text-right">
+                https://centraldasletras.blogspot.com/p/modelos-de-redacao.html
+            </h4>
+        </div>
+        <p>
+            Outras classificações são possíveis, desde que sejam fundamentadas.
+        </p>
+    </section>
+        <!-- Seção Saiba Mais - Retângulo de Fundo -->
+        <section class="background-section">
+            <!-- Círculo Verde -->
+            <div class="circle-green">
+                <!-- Círculo Branco com ícone -->
+                <div class="circle-white">
+                    <i class='bx bx-book-reader'></i>
+                </div>
+            </div>
+            <div class="transparent-section">
+                <h1 class="learn-more-title">SAIBA MAIS</h1>
+                <p class="learn-more-paragraph">
+                    <strong>Aprenda a estruturar um artigo de opinião com clareza e argumentação sólida!</strong><br><br>
+                    Neste vídeo, você entenderá a importância desse gênero textual, suas principais
+                    características e como desenvolver um posicionamento crítico embasado. Essencial
+                    para quem deseja aprimorar a escrita acadêmica e profissional.
+                </p>
+                <!-- Ícone de Play -->
+                <div class="play-icon" data-video="https://www.youtube.com/embed/TskyRe7z19I?si=VHngzE78GkE7LQVw"
+                    onclick="openVideoModal(this)">
+                    <i class='bx bx-play-circle'></i>
+                </div>
+            </div>
+            <!-- Modal com o vídeo -->
+            <div id="videoModal" class="video-modal" onclick="closeVideoModal()">
+                <div class="video-content" onclick="event.stopPropagation()">
+                    <i class="bx bxs-x-circle close-btn" onclick="closeVideoModal()"></i>
+                    <iframe id="videoIframe" width="800" height="450" src="" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    <section class="secao1" id="secao9">
+        <h1>
+            9. REVISÃO
+        </h1>
+        <p>
+            Por que os ORGANIZADORES TEXTUAIS são, particularmente importantes, no artigo de opinião? Um
+            bom texto argumentativo sempre apresenta o outro lado, para melhor fundamentar o próprio lado.
+        </p>
+        <p>
+            Confira a paragrafação do artigo. Verifique se ele apresenta essas “marcas de costura” (organizadores
+            textuais) entre um parágrafo ou outro e, relação entre as ideias do parágrafo. Às vezes, essas marcas
+            estão “subentendidas”.
+        </p>
+        <p>
+            A argumentação é outro aspecto importante. Um artigo de opinião não é composto apenas de várias
+            informações. Expor fatos, listar ideias, por mais coerentes e pertinentes que sejam para a discussão do
+            tema, não constitui a OPINIÃO do escritor. Por isso, é preciso relacionar as informações apresentadas e
+            como elas defendem o ponto de vista delimitado por ele.
+        </p>
+        <p>
+            Uma boa argumentação possui uma determinada estrutura composta pelos títulos apresentados a seguir.
+        </p>
+        <!-- SEGUNDA SEÇÃO DE TABS (COM OUTRA COR) -->
+        <div class="tabs-container tabs-container-alt">
+            <div class="tabs-header">
+                <button class="tab-button" data-tab="tab6">FATOS</button>
+                <button class="tab-button" data-tab="tab7">OPINIÃO</button>
+                <button class="tab-button" data-tab="tab8">TESE</button>
+                <button class="tab-button" data-tab="tab9">ARGUMENTAÇÃO</button>
+            </div>
+            <div class="tabs-content">
+                <div id="tab6" class="tab-content">
+                    <p class="textimg">
+                        Quando algo aconteceu. Por exemplo: o Mensalão – esquema de corrupção – desviou
+                        mais de R$100 milhões, conforme os laudos da Polícia Militar.
+                    </p>
+                </div>
+                <div id="tab7" class="tab-content">
+                    <p class="textimg">
+                        Algo em que você acredita, é totalmente pessoal. Por exemplo: existe muita corrupção no Brasil e eu sou contra esse tipo
+                        de atitude.
+                    </p>
+                </div>
+                <div id="tab8" class="tab-content">
+                    <p class="textimg">
+                        Seu posicionamento em relação àquilo que você defende e deseja convencer as pessoas – essas podem concordar ou não. Por
+                        exemplo: a corrupção existe no Brasil porque, na maioria das vezes, não há Justiça eficiente ou há outros interesses.
+                    </p>
+                </div>
+                <div id="tab9" class="tab-content">
+                    <p class="textimg">
+                        A defesa da tese, construída com base em exemplos (fatos) e análises (conclusão que tiramos a partir da observação dos
+                        fatos), sempre com o objetivo de <strong>convencer o leitor a mudar sua atitude, sua opinião em relação ao tema.</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <h1 id="secao10">
+            10. REVISANDO
+        </h1>
+        <div class="topico-texto">
+            <ul>
+                <li>
+                    <span class="topico-destaque"><strong>▸ Contexto</strong></span>
+                    <ul class="subitens">
+                        <li>• O Produtor oferece resposta a uma questão controversa, colocada no jornal como discutível.</li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="topico-destaque"><strong>▸ Tema</strong></span>
+                    <ul class="subitens">
+                        <li>• Atual, de ordem social, política, econômica ou cultural.</li>
+                        <li>• Relevante no ponto de vista do jornal.</li>
+                        <li>• Não há consenso na sociedade sobre a questão.</li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="topico-destaque"><strong>▸ Produtor</strong></span>
+                    <ul class="subitens">
+                        <li>• Imagem de si mesmo (figura de autoridade >>> governo, sindicato, academia, empresa, judiciário etc)</li>
+                        
+                    </ul>
+                </li>
+                <li>
+                    <span class="topico-destaque"><strong>▸ Suporte</strong></span>
+                    <ul class="subitens">
+                        <li>• Imagem do jornal (papel social do periódico): influenciar opiniões.</li>
+                        <li>• Imagem da seção específica (função da coluna): outros textos com posicionamentos diferentes.</li>
+                        <li>• Produção aparentemente à base de um monólogo.</li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="topico-destaque"><strong>▸ Destinatário</strong></span>
+                    <ul class="subitens">
+                        <li>• Imagens do leitor: leitores fiéis do jornal, revista ou periódico; especialistas sobre a questão; leitores atualizados / informados.</li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="topico-destaque"><strong>▸ Objetivo</strong></span>
+                    <ul class="subitens">
+                        <li>• Construir / transformar (mudar, reforçar, enfraquecer) a posição ou comportamento do leitor</li>
+                        <li>• Sustentação de argumentos convincentes</li>
+                        <li>• Refutação de argumentos contrários (produtor prevê refutações / conclusões contrárias)</li>
+                        <li>• Negociação de argumentos</li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="topico-destaque"><strong>▸ Tipos de discurso (linguagem)</strong></span>
+                    <ul class="subitens">
+                        <li>• Uso de marcas de 1ª. pessoa (nós): refere-se ao Brasil / brasileiros / elite político-econômica</li>
+                        <li>• Engaja leitores nas afirmações do autor</li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="topico-destaque"><strong>▸ Estrutura textual</strong></span>
+                    <ul class="subitens">
+                        <li>• Predominantemente argumentativa: argumentos vão fornecendo conclusões parciais / conclusões parciais tornam-se argumentos para a conclusão final</li>
+                        <li>• Isso indica que o produtor considera que há destinatários (leitores) que não compartilham de suas opiniões.</li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="topico-destaque"><strong>▸ No final do texto</strong></span>
+                    <ul class="subitens">
+                        <li>• Síntese das conclusões parciais (defendidas no percurso do texto) / reiteração da conclusão global / conclusão nem sempre corresponde a uma resposta à questão colocada pelo jornal, mas a ela se relaciona.</li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="topico-destaque"><strong>▸ Argumentos (em geral) >>> Organizadores Textuais.</strong></span>
+                    <ul class="subitens">
+                        <li>• Um em cada parágrafo, introduzidos por conectores argumentativos reforçados por exposição de exemplos e fatos concretos.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <p>
+            Em suma, o artigo de opinião, apesar de ser <span class="underlinetext">escrito</span>, pode ser visto como um diálogo com o pensamento
+            do outro, para transformar suas opiniões e/ou atitudes.
+        </p>
+        <p>
+            Quanto aos argumentos, eles podem ajudar na exposição <span class="underlinetext">oral</span> de várias profissões.
+        </p>
+    </section>
+    <!-- Seção Conclusão -->
+    <section id="conclusao" class="conclusao">
+        <!-- Conteúdo -->
+        <div class="conteudo-conclusao">
+            <div class="caixa-texto">
+                <h1 class="titulo-conclusao">CONCLUSÃO</h1>
+                <p>
+                    A produção de um artigo de opinião exige não apenas domínio do tema abordado, mas também a
+                    habilidade de organizar ideias de forma clara e coerente. A argumentação deve ser fundamentada em
+                    dados, exemplos e raciocínios lógicos, buscando convencer o leitor por meio da exposição de pontos de
+                    vista bem articulados.
+                </p>
+                <p>
+                    Ao longo desta unidade, foram apresentadas as principais características desse gênero textual, destacando
+                    a importância de uma linguagem persuasiva e da estrutura adequada para a construção de um discurso
+                    eficaz. A prática contínua desse tipo de escrita não só contribui para o desenvolvimento acadêmico, mas
+                    também para a capacidade de análise e expressão crítica em diversos contextos sociais e profissionais.
+                </p>
+    
+            </div>
+        </div>
+        <div id="download" class="download-section">
+            <a href="" class="download-btn">
+                Baixar PDF <i class="fas fa-download"></i> <!-- Ícone de download -->
+            </a>
+        </div>
+    </section>
+    <!-- Seção Referências-->
+    <section id="referencias" class="referencias">
+        <div class="conteudo-referencias">
+            <div class="caixa-texto">
+                <h1 class="titulo-referencias">REFERÊNCIAS</h1>
+                <p>
+                    BARBOSA, Jacqueline. P. Artigo de Opinião. Sequência Didática. Secretaria da Educação de São Paulo,
+                    2000.
+                </p>
+                <p>
+                    CASSEB-GALVÃO, Vânia; DUARTE, Milcinele. Artigo de Opinião. Sequência Didática. Parábola Editora.
+                    2015.
+                </p>
+                <p>
+                    https://pt.slideshare.net/elislimaescapacherri/artigo-de-opinio-sequncia-didtica
+                </p>
+                <p>
+                    http://oblogderedacao.blogspot.com/2012/10/tipos-de-argumentos.html
+                </p>
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>Copyright © de Universidade São Francisco</p>
+        <hr class="footer-divider">
+        <span class="fonte-menor">Todos os direitos reservados. Este ebook ou
+            qualquer parte dele não pode ser reproduzido ou usado em quaisquer formas (eletrônico,
+            gravação, fotocópia, distribuição pela Internet ou outros) sem autorização
+            expressa, por escrito, da <strong>Universidade São Francisco.</strong></span>
+    </footer>
+    <script>
+        // Navbar
+            document.querySelector('.menu-toggle').addEventListener('click', () => {
+                const menu = document.querySelector('.navbar ul');
+                const icons = document.querySelectorAll('.menu-toggle i'); // Seleciona ambos os ícones
+
+                menu.classList.toggle('show'); // Alterna a visibilidade do menu
+
+                // Alterna entre o ícone de abrir (menu) e o ícone de fechar (x)
+                icons[0].style.display = icons[0].style.display === 'none' ? 'block' : 'none'; // Mostra ou esconde o ícone de menu
+                icons[1].style.display = icons[1].style.display === 'none' ? 'block' : 'none'; // Mostra ou esconde o ícone de fechar
+            });
+            // Fechar o menu ao clicar em um link
+            const links = document.querySelectorAll('.navbar ul li a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    const menu = document.querySelector('.navbar ul');
+                    const icons = document.querySelectorAll('.menu-toggle i');
+
+                    // Fecha o menu ao clicar no link
+                    menu.classList.remove('show');
+                    icons[0].style.display = 'block'; // Exibe o ícone de menu
+                    icons[1].style.display = 'none'; // Esconde o ícone de fechar
+                });
+            });
+            // Captura o elemento navbar
+            const navbar = document.querySelector('.navbar');
+
+            // Função que altera a opacidade da navbar
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) { // Quando o scroll for maior que 50px
+                    navbar.style.backgroundColor = 'rgba(159, 67, 190, 0.8)'; // Opacidade 80%
+                } else {
+                    navbar.style.backgroundColor = '#9F43BE'; // Cor original sem transparência
+                }
+            });
+        let currentSlide = 0;
+            const slides = document.querySelectorAll('.slide');
+            const totalSlides = slides.length;
+
+            function updateSlider() {
+                const slider = document.querySelector('.slider');
+                slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateSlider();
+            }
+
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                updateSlider();
+            }
+
+            // Opcional: permite navegar com as setas do teclado
+            document.addEventListener('keydown', function (e) {
+                if (e.key === "ArrowRight") nextSlide();
+                if (e.key === "ArrowLeft") prevSlide();
+            });
+        document.querySelectorAll(".tabs-container").forEach(container => {
+                let tabsContent = container.querySelector(".tabs-content");
+
+                container.querySelectorAll(".tab-button").forEach(button => {
+                    button.addEventListener("click", function () {
+                        let isActive = container.querySelector(".tab-content.active");
+
+                        // Se a aba já estiver ativa, desativa tudo
+                        if (isActive && container.querySelector(`#${this.dataset.tab}`).classList.contains("active")) {
+                            container.querySelectorAll(".tab-button").forEach(btn => btn.classList.remove("active"));
+                            container.querySelectorAll(".tab-content").forEach(content => content.classList.remove("active"));
+                            tabsContent.style.display = "none";
+                            return;
+                        }
+
+                        // Mostra a aba selecionada
+                        tabsContent.style.display = "block";
+
+                        container.querySelectorAll(".tab-button").forEach(btn => btn.classList.remove("active"));
+                        container.querySelectorAll(".tab-content").forEach(content => content.classList.remove("active"));
+
+                        this.classList.add("active");
+                        container.querySelector(`#${this.dataset.tab}`).classList.add("active");
+                    });
+                });
+            });
+            // Script para funcionalidade do acordeon
+                document.querySelectorAll('.acordeon-header').forEach(header => {
+                    header.addEventListener('click', () => {
+                        const content = header.nextElementSibling;
+                        const isVisible = content.style.display === 'block';
+
+                        // Apenas abre ou fecha o acordeon clicado
+                        content.style.display = isVisible ? 'none' : 'block';
+
+                        // Alternar a classe da seta
+                        const icon = header.querySelector('.acordeon-icon');
+                        if (icon) {
+                            icon.classList.toggle('bx-chevron-up', !isVisible); // Seta para cima
+                            icon.classList.toggle('bx-chevron-down', isVisible); // Seta para baixo
+                        }
+                    });
+                });
+                // Script para funcionalidade do novo accordion
+                document.querySelectorAll('.accordion-header-diferente').forEach(header => {
+                    header.addEventListener('click', () => {
+                        const content = header.nextElementSibling;
+                        const isVisible = content.style.display === 'block';
+
+                        // Apenas abre ou fecha o accordion clicado
+                        content.style.display = isVisible ? 'none' : 'block';
+
+                        // Alternar a classe da seta
+                        const icon = header.querySelector('.accordion-icon-diferente');
+                        if (icon) {
+                            icon.classList.toggle('bx-chevron-up', !isVisible); // Seta para cima
+                            icon.classList.toggle('bx-chevron-down', isVisible); // Seta para baixo
+                        }
+                    });
+                });
+               // Função para abrir o modal com o vídeo
+                function openVideoModal(element) {
+                    var videoModal = document.getElementById('videoModal');
+                    var iframe = document.getElementById('videoIframe');
+
+                    // Obtém o link do vídeo do atributo 'data-video' do ícone de play clicado
+                    var videoLink = element.getAttribute("data-video");
+
+                    // Define o src do iframe com o link do vídeo
+                    iframe.src = videoLink;
+
+                    // Exibe o modal
+                    videoModal.style.display = "flex";
+                }
+
+                // Função para fechar o modal
+                function closeVideoModal() {
+                    var videoModal = document.getElementById('videoModal');
+                    var iframe = document.getElementById('videoIframe');
+
+                    // Limpa o vídeo (remove a URL para evitar que o vídeo continue tocando)
+                    iframe.src = "";
+                    videoModal.style.display = "none";  // Fecha o modal
+                }
+
+                // Impede o fechamento do modal quando o clique for dentro do modal de vídeo
+                document.getElementById('videoModal').addEventListener('click', function (event) {
+                    // Apenas fecha o modal se o clique for fora da área de conteúdo (ou seja, na área preta)
+                    if (event.target === this) {
+                        closeVideoModal();
+                    }
+                });
+                // Abrir modal ao clicar na imagem
+                    function openModal(imgElement) {
+                        let modal = document.getElementById("imageModal");
+                        let modalImg = document.getElementById("modalImg");
+
+                        modal.style.display = "flex";
+                        modalImg.src = imgElement.src;
+                    }
+
+                    // Fechar modal ao clicar no fundo ou no botão "X"
+                    function closeModal() {
+                        document.getElementById("imageModal").style.display = "none";
+                    }
+    </script>
+</body>
+</html>
