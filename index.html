@@ -547,27 +547,27 @@
             }
         }
         .tabs-container {
-            width: 80%;
+            width: 90%;
             max-width: 600px;
             padding: 10px;
+            margin: 0 auto;
         }
 
         .tabs-header {
             display: grid;
-            justify-content: space-between;
             gap: 10px; /* Espaçamento entre as abas */
-            grid-template-columns: repeat(2, 1fr); /* 2 por linha no mobile */
+            width: 100%;
         }
 
         .tab-button {
             flex: 1 1 calc(50% - 10px); /* 2 por linha no mobile */
-            min-width: 120px;
-            padding: 15px;
+            width: 100%;
+            padding: 18px 0;
             text-align: center;
             cursor: pointer;
             color: white;
             font-weight: bold;
-            font-size: 14px;
+            font-size: 15px;
             border: none;
             background: #015A42; /* Cor individual para cada aba */
             border-radius: 8px; /* Borda arredondada */
@@ -621,19 +621,7 @@
         .tabs-container-alt .tabs-content {
             border: 2px solid #9F43BE;
         }
-           /* Ajuste para tablets */
-@media screen and (min-width: 600px) {
-    .tabs-header {
-        grid-template-columns: repeat(3, 1fr); /* 3 por linha */
-    }
-}
-
-/* Ajuste para desktop */
-@media screen and (min-width: 900px) {
-    .tabs-header {
-        grid-template-columns: repeat(4, 1fr); /* 4 por linha */
-    }
-}
+    
         .text-italic{
             font-style: italic;
         }
@@ -649,6 +637,9 @@
             font-size: 12px !important;
             color: #555;
             text-align: right !important;
+            display: block;
+            word-break: break-word; /* <- Isso permite a quebra de links longos */
+            overflow-wrap: break-word; /* <- Alternativa mais ampla */
         }
         .small-frameg {
             border: 2px solid #015A42;
@@ -839,31 +830,32 @@
         .topico-texto ul {
             list-style: none; /* Remove marcadores padrão */   
         }
-
+        
         .topico-texto ul li {
             font-size: 16px;
             font-family: 'Roboto', sans-serif;
             color: #333;
-            display: flex;
-            align-items: flex-start; /* Alinha o texto com o ícone */
             white-space: pre-wrap; /* Preserva espaços e quebras de linha */
-            flex-direction: column;
+            margin: 8px 0; /* Reduz o espaço entre os itens principais */
+            padding: 0;
         }
                 /* Subitens */
         .subitens {
-            padding-left: 25px; /* Indentação para subitens */
+            padding-left: 30px;
+            margin: 0;
         }
-
+        
         .subitens li {
             display: list-item;
             list-style-type: disc; /* Aparece como bolinha • */
             color: #444;
             font-size: 15px;
+            margin-bottom: 5px;
         }
-                .topico-destaque {
-            font-size: 18px; /* Aumente o tamanho conforme a necessidade */
-            font-weight: 400;
-            padding: 5px 0;
+        .topico-destaque {
+            display: block;
+            align-items: center;
+            margin-bottom: -30px; /* Espaço menor antes dos subitens */
         }
 
         /* Responsividade */
@@ -877,6 +869,10 @@
             }
 
             .topico-texto ul li {
+                font-size: 14px;
+                margin: -5px 0;
+            }
+            .subitens li {
                 font-size: 14px;
             }
         }
@@ -2172,7 +2168,9 @@
         <div class="topico-texto">
             <ul>
                 <li><span class="topico-destaque"><strong>▸ </strong>Qual a tese (posição) central defendida pelo autor?</span></li>
+                <br>
                 <li><span class="topico-destaque"><strong>▸ </strong>Que argumentos foram apresentados em defesa dessa tese?</span></li>
+                <br>
                 <li><span class="topico-destaque"><strong>▸ </strong>A quem se dirige o texto lido?</span></li>
             </ul>
         </div>
@@ -2182,10 +2180,12 @@
         </p>
         <div class="topico-texto">
             <ul>
-                <li><span class="topico-destaque"><strong>▸ </strong>Concordo com a posição (tese) do autor.</span>
-                </li>
+                <li><span class="topico-destaque"><strong>▸ </strong>Concordo com a posição (tese) do autor.</span></li>
+                <br>
                 <li><span class="topico-destaque"><strong>▸ </strong>Não concordo com a posição (tese), mas reconheço que a(s) argumentação(ões) foi (foram) boa(s) e relevante(s).</span></li>
+                <br>
                 <li><span class="topico-destaque"><strong>▸ </strong>Não há nenhuma posição do autor frente ao tema e a(s) argumentação(ões) “não tem pé nem cabeça”.</span></li>
+                <br>
                 <li><span class="topico-destaque"><strong>▸ </strong>A posição parece relevante, mas não é universal.</span></li>
             </ul>
         </div>
@@ -2598,11 +2598,14 @@
         </p>
         <div class="topico-texto">
             <ul>
-                <li><span class="topico-destaque"><strong>▸ </strong>Por alguém. O <strong>PRODUTOR</strong>, geralmente, especialista no assunto ou, no mínimo, alguém que estuda aspectos da questão em discussão ou um representante de determinada instituição social (sindicatos, governo, universidades, ONGS etc) que, de alguma forma, tem algo a dizer sobre a questão.</span>
-                </li>
+                <li><span class="topico-destaque"><strong>▸ </strong>Por alguém. O <strong>PRODUTOR</strong>, geralmente, especialista no assunto ou, no mínimo, alguém que estuda aspectos da questão em discussão ou um representante de determinada instituição social (sindicatos, governo, universidades, ONGS etc) que, de alguma forma, tem algo a dizer sobre a questão.</span></li>
+                <br>
                 <li><span class="topico-destaque"><strong>▸ </strong>Para alguém. Os <strong>LEITORES</strong>, pessoas que frequentemente leem determinado jornal ou revista.</span></li>
+                <br>
                 <li><span class="topico-destaque"><strong>▸ </strong>Com certa intenção. <strong>PESSOAS</strong> que estão, de alguma forma, <strong>interessadas</strong> na questão polêmica, seja porque as afeta diretamente, seja porque se interessam pela discussão dos assuntos em pauta na sociedade.</span></li>
+                <br>
                 <li><span class="topico-destaque"><strong>▸ </strong>Em determinado tempo e lugar. Um artigo de opinião circula em <strong>jornais e revistas impressos ou on-line.</strong></span></li>
+                <br>
                 <li><span class="topico-destaque"><strong>▸ </strong>E <strong>divulgados</strong> em certo <strong>veículo de comunicação</strong> (livros, revistas, jornais etc).</span></li>
             </ul>
         </div>
@@ -2722,12 +2725,19 @@
         <div class="topico-texto">
             <ul>
                 <li><span class="topico-destaque">(1) Contextualização e/ou apresentação da questão em discussão.</span></li>
+                <br>
                 <li><span class="topico-destaque">(2) Explicitação da posição assumida.</span></li>
+                <br>
                 <li><span class="topico-destaque">(3) Utilização de argumentos que sustentam a posição assumida.</span></li>
+                <br>
                 <li><span class="topico-destaque">(4) Consideração de posição contrária e antecipação de possíveis argumentos contrários à posição assumida.</span></li>
+                <br>
                 <li><span class="topico-destaque">(5) Utilização de argumentos que refutam a posição contrária.</span></li>
+                <br>
                 <li><span class="topico-destaque">(6) Retomada da posição assumida e/ou retomada do argumento mais enfático.</span></li>
+                <br>
                 <li><span class="topico-destaque">(7) Proposta ou possibilidades de negociação.</span></li>
+                <br>
                 <li><span class="topico-destaque">(8) Conclusão (que pode ser a retomada da tese ou posição defendida).</span></li>
             </ul>
         </div>
@@ -2897,71 +2907,71 @@
                 <li>
                     <span class="topico-destaque"><strong>▸ Contexto</strong></span>
                     <ul class="subitens">
-                        <li>• O Produtor oferece resposta a uma questão controversa, colocada no jornal como discutível.</li>
+                        <li>O Produtor oferece resposta a uma questão controversa, colocada no jornal como discutível.</li>
                     </ul>
                 </li>
                 <li>
                     <span class="topico-destaque"><strong>▸ Tema</strong></span>
                     <ul class="subitens">
-                        <li>• Atual, de ordem social, política, econômica ou cultural.</li>
-                        <li>• Relevante no ponto de vista do jornal.</li>
-                        <li>• Não há consenso na sociedade sobre a questão.</li>
+                        <li>Atual, de ordem social, política, econômica ou cultural.</li>
+                        <li>Relevante no ponto de vista do jornal.</li>
+                        <li>Não há consenso na sociedade sobre a questão.</li>
                     </ul>
                 </li>
                 <li>
                     <span class="topico-destaque"><strong>▸ Produtor</strong></span>
                     <ul class="subitens">
-                        <li>• Imagem de si mesmo (figura de autoridade >>> governo, sindicato, academia, empresa, judiciário etc)</li>
+                        <li>Imagem de si mesmo (figura de autoridade >>> governo, sindicato, academia, empresa, judiciário etc)</li>
                         
                     </ul>
                 </li>
                 <li>
                     <span class="topico-destaque"><strong>▸ Suporte</strong></span>
                     <ul class="subitens">
-                        <li>• Imagem do jornal (papel social do periódico): influenciar opiniões.</li>
-                        <li>• Imagem da seção específica (função da coluna): outros textos com posicionamentos diferentes.</li>
-                        <li>• Produção aparentemente à base de um monólogo.</li>
+                        <li>Imagem do jornal (papel social do periódico): influenciar opiniões.</li>
+                        <li>Imagem da seção específica (função da coluna): outros textos com posicionamentos diferentes.</li>
+                        <li>Produção aparentemente à base de um monólogo.</li>
                     </ul>
                 </li>
                 <li>
                     <span class="topico-destaque"><strong>▸ Destinatário</strong></span>
                     <ul class="subitens">
-                        <li>• Imagens do leitor: leitores fiéis do jornal, revista ou periódico; especialistas sobre a questão; leitores atualizados / informados.</li>
+                        <li>Imagens do leitor: leitores fiéis do jornal, revista ou periódico; especialistas sobre a questão; leitores atualizados / informados.</li>
                     </ul>
                 </li>
                 <li>
                     <span class="topico-destaque"><strong>▸ Objetivo</strong></span>
                     <ul class="subitens">
-                        <li>• Construir / transformar (mudar, reforçar, enfraquecer) a posição ou comportamento do leitor</li>
-                        <li>• Sustentação de argumentos convincentes</li>
-                        <li>• Refutação de argumentos contrários (produtor prevê refutações / conclusões contrárias)</li>
-                        <li>• Negociação de argumentos</li>
+                        <li>Construir / transformar (mudar, reforçar, enfraquecer) a posição ou comportamento do leitor</li>
+                        <li>Sustentação de argumentos convincentes</li>
+                        <li>Refutação de argumentos contrários (produtor prevê refutações / conclusões contrárias)</li>
+                        <li>Negociação de argumentos</li>
                     </ul>
                 </li>
                 <li>
                     <span class="topico-destaque"><strong>▸ Tipos de discurso (linguagem)</strong></span>
                     <ul class="subitens">
-                        <li>• Uso de marcas de 1ª. pessoa (nós): refere-se ao Brasil / brasileiros / elite político-econômica</li>
-                        <li>• Engaja leitores nas afirmações do autor</li>
+                        <li>Uso de marcas de <strong>1ª. pessoa (nós)</strong>: refere-se ao Brasil / brasileiros / elite político-econômica</li>
+                        <li>Engaja leitores nas afirmações do autor</li>
                     </ul>
                 </li>
                 <li>
                     <span class="topico-destaque"><strong>▸ Estrutura textual</strong></span>
                     <ul class="subitens">
-                        <li>• Predominantemente argumentativa: argumentos vão fornecendo conclusões parciais / conclusões parciais tornam-se argumentos para a conclusão final</li>
-                        <li>• Isso indica que o produtor considera que há destinatários (leitores) que não compartilham de suas opiniões.</li>
+                        <li>Predominantemente argumentativa: argumentos vão fornecendo conclusões parciais / conclusões parciais tornam-se argumentos para a conclusão final</li>
+                        <li>Isso indica que o produtor considera que há destinatários (leitores) que não compartilham de suas opiniões.</li>
                     </ul>
                 </li>
                 <li>
                     <span class="topico-destaque"><strong>▸ No final do texto</strong></span>
                     <ul class="subitens">
-                        <li>• Síntese das conclusões parciais (defendidas no percurso do texto) / reiteração da conclusão global / conclusão nem sempre corresponde a uma resposta à questão colocada pelo jornal, mas a ela se relaciona.</li>
+                        <li>Síntese das conclusões parciais (defendidas no percurso do texto) / reiteração da conclusão global / conclusão nem sempre corresponde a uma resposta à questão colocada pelo jornal, mas a ela se relaciona.</li>
                     </ul>
                 </li>
                 <li>
                     <span class="topico-destaque"><strong>▸ Argumentos (em geral) >>> Organizadores Textuais.</strong></span>
                     <ul class="subitens">
-                        <li>• Um em cada parágrafo, introduzidos por conectores argumentativos reforçados por exposição de exemplos e fatos concretos.</li>
+                        <li>Um em cada parágrafo, introduzidos por conectores argumentativos reforçados por exposição de exemplos e fatos concretos.</li>
                     </ul>
                 </li>
             </ul>
@@ -3007,11 +3017,11 @@
             <div class="caixa-texto">
                 <h1 class="titulo-referencias">REFERÊNCIAS</h1>
                 <p>
-                    BARBOSA, Jacqueline. P. Artigo de Opinião. Sequência Didática. Secretaria da Educação de São Paulo,
+                    BARBOSA, Jacqueline. P. <strong>Artigo de Opinião. Sequência Didática.</strong> Secretaria da Educação de São Paulo,
                     2000.
                 </p>
                 <p>
-                    CASSEB-GALVÃO, Vânia; DUARTE, Milcinele. Artigo de Opinião. Sequência Didática. Parábola Editora.
+                    CASSEB-GALVÃO, Vânia; DUARTE, Milcinele. <strong>Artigo de Opinião. Sequência Didática.</strong> Parábola Editora.
                     2015.
                 </p>
                 <p>
