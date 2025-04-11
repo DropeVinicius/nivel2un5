@@ -672,6 +672,8 @@
             margin: 20px auto;
             line-height: 1.8;
             font-family: 'Roboto', sans-serif;
+            word-break: break-word;
+            overflow-wrap: break-word;
         }
                 /* Responsividade */
         @media (max-width: 768px) {
@@ -707,6 +709,20 @@
             text-align: right !important;
             margin-right: 40px !important; /* Ajusta alinhamento à direita */
             margin-left: auto !important;
+        }
+        /* Ajustes para telas pequenas */
+        @media (max-width: 768px) {
+            .text-right {
+                margin-right: 10px !important;
+                margin-left: auto !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .text-right {
+                margin-right: 5px !important;
+                margin-left: auto !important;
+            }
         }
         /* Contêiner dos flip cards */
         .flip-card-container {
@@ -2168,12 +2184,12 @@
         <div class="topico-texto">
             <ul>
                 <li><span class="topico-destaque"><strong>▸ </strong>Qual a tese (posição) central defendida pelo autor?</span></li>
-                <br>
+                <br><br>
                 <li><span class="topico-destaque"><strong>▸ </strong>Que argumentos foram apresentados em defesa dessa tese?</span></li>
-                <br>
+                <br><br>
                 <li><span class="topico-destaque"><strong>▸ </strong>A quem se dirige o texto lido?</span></li>
             </ul>
-        </div>
+        </div><br>
         <p>
             Além desses pontos, você deve refletir (pensar) nas seguintes circunstâncias, após ter lido um artigo de
             opinião:
@@ -2181,14 +2197,14 @@
         <div class="topico-texto">
             <ul>
                 <li><span class="topico-destaque"><strong>▸ </strong>Concordo com a posição (tese) do autor.</span></li>
-                <br>
+                <br><br>
                 <li><span class="topico-destaque"><strong>▸ </strong>Não concordo com a posição (tese), mas reconheço que a(s) argumentação(ões) foi (foram) boa(s) e relevante(s).</span></li>
-                <br>
+                <br><br>
                 <li><span class="topico-destaque"><strong>▸ </strong>Não há nenhuma posição do autor frente ao tema e a(s) argumentação(ões) “não tem pé nem cabeça”.</span></li>
-                <br>
+                <br><br>
                 <li><span class="topico-destaque"><strong>▸ </strong>A posição parece relevante, mas não é universal.</span></li>
             </ul>
-        </div>
+        </div><br>
         <h1 id="secao4">
             4. COMO ESTRUTURAR UM ARTIGO DE OPINIÃO
         </h1>
@@ -2292,12 +2308,14 @@
         <div class="topico-texto">
             <ul>
                 <li><span class="topico-destaque"><strong>▸ </strong><span class="text-italic">A terra gira em torno do sol.</span></span></li>
+                <br><br>
                 <li><span class="topico-destaque"><strong>▸ </strong><span class="text-italic">A bactéria é um ser vivo.</span></span></li>
+                <br><br>
                 <li><span class="topico-destaque"><strong>▸ </strong><span class="text-italic">O filme “Cidade de Deus” concorreu ao Oscar de melhor filme, mas não ganhou.</span></span></li>
-                <li><span class="topico-destaque"><strong>▸ </strong><span class="text-italic">O governo federal encaminhou ao Congresso Nacional um projeto de lei que estabelece novos critérios de acesso ao ensino universitário.</span></span>
-                </li>
+                <br><br>
+                <li><span class="topico-destaque"><strong>▸ </strong><span class="text-italic">O governo federal encaminhou ao Congresso Nacional um projeto de lei que estabelece novos critérios de acesso ao ensino universitário.</span></span></li>
             </ul>
-        </div>
+        </div><br>
         <p>
             <strong>As duas primeiras frases</strong> afirmam verdades científicas que, levando em conta os conhecimentos científicos
             acumulados até os dias de hoje, podem ser comprovadas. Assim, não cabe contestá-las ou argumentar a
@@ -2599,16 +2617,16 @@
         <div class="topico-texto">
             <ul>
                 <li><span class="topico-destaque"><strong>▸ </strong>Por alguém. O <strong>PRODUTOR</strong>, geralmente, especialista no assunto ou, no mínimo, alguém que estuda aspectos da questão em discussão ou um representante de determinada instituição social (sindicatos, governo, universidades, ONGS etc) que, de alguma forma, tem algo a dizer sobre a questão.</span></li>
-                <br>
+                <br><br>
                 <li><span class="topico-destaque"><strong>▸ </strong>Para alguém. Os <strong>LEITORES</strong>, pessoas que frequentemente leem determinado jornal ou revista.</span></li>
-                <br>
+                <br><br>
                 <li><span class="topico-destaque"><strong>▸ </strong>Com certa intenção. <strong>PESSOAS</strong> que estão, de alguma forma, <strong>interessadas</strong> na questão polêmica, seja porque as afeta diretamente, seja porque se interessam pela discussão dos assuntos em pauta na sociedade.</span></li>
-                <br>
+                <br><br>
                 <li><span class="topico-destaque"><strong>▸ </strong>Em determinado tempo e lugar. Um artigo de opinião circula em <strong>jornais e revistas impressos ou on-line.</strong></span></li>
-                <br>
+                <br><br>
                 <li><span class="topico-destaque"><strong>▸ </strong>E <strong>divulgados</strong> em certo <strong>veículo de comunicação</strong> (livros, revistas, jornais etc).</span></li>
             </ul>
-        </div>
+        </div><br>
         <h1>
             7.1 A LINGUAGEM
         </h1>
@@ -2725,22 +2743,22 @@
         <div class="topico-texto">
             <ul>
                 <li><span class="topico-destaque">(1) Contextualização e/ou apresentação da questão em discussão.</span></li>
-                <br>
+                <br><br>
                 <li><span class="topico-destaque">(2) Explicitação da posição assumida.</span></li>
-                <br>
+                <br><br>
                 <li><span class="topico-destaque">(3) Utilização de argumentos que sustentam a posição assumida.</span></li>
-                <br>
+                <br><br>
                 <li><span class="topico-destaque">(4) Consideração de posição contrária e antecipação de possíveis argumentos contrários à posição assumida.</span></li>
-                <br>
+                <br><br>
                 <li><span class="topico-destaque">(5) Utilização de argumentos que refutam a posição contrária.</span></li>
-                <br>
+                <br><br>
                 <li><span class="topico-destaque">(6) Retomada da posição assumida e/ou retomada do argumento mais enfático.</span></li>
-                <br>
+                <br><br>
                 <li><span class="topico-destaque">(7) Proposta ou possibilidades de negociação.</span></li>
-                <br>
+                <br><br>
                 <li><span class="topico-destaque">(8) Conclusão (que pode ser a retomada da tese ou posição defendida).</span></li>
             </ul>
-        </div>
+        </div><br>
         <p>
             Esses elementos podem vir em qualquer ordem e nem todos precisam aparecer num artigo de opinião.
             Leia o artigo de opinião que se segue, escrito por Jairo Bouer. Ao final de cada parte você verá o número
